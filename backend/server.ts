@@ -17,8 +17,8 @@ app.use(cors({
   origin: [
     'http://localhost:8080', 
     'https://hws-virid.vercel.app',
-    'https://holisticwell-beingsolutions.com/',
-    'https://www.holisticwell-beingsolutions.com/',
+    'https://holisticwell-beingsolutions.com',
+    'https://www.holisticwell-beingsolutions.com',
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
