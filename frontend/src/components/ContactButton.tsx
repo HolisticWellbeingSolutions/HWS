@@ -62,11 +62,22 @@ const ContactButton = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://formspree.io/f/xpwogjpv', {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+          }),
+        }
+      );
 
       if (response.ok) {
         setIsSubmitted(true);
