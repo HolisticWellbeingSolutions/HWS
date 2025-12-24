@@ -27,6 +27,7 @@ const staggerContainer = {
 };
 
 const Contact = () => {
+  const API = import.meta.env.VITE_API_URL;
   const { toast } = useToast();
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -83,8 +84,11 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/xpwogjpv", {
+      const response = await fetch(`${API}/contact`, {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
           firstName: formData.firstName,
           lastName: formData.lastName,
@@ -94,10 +98,6 @@ const Contact = () => {
           subject: formData.subject,
           message: formData.message,
         }),
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
       });
 
       if (response.ok) {

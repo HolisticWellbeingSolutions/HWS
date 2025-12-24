@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser';
 
 import userRoutes from './routes/userRoutes';
 import bookingRoutes from "./routes/bookingRoutes";
+import contactRoutes from "./routes/contactRoutes";
 
 import path from 'path';
 
@@ -13,7 +14,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:8080', 'https://hws-tau.vercel.app'],
+  origin: ['http://localhost:8080', 'https://hws-virid.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
@@ -30,6 +31,7 @@ app.use(cookieParser());
 
 app.use('/api/auth', userRoutes);
 app.use("/api/booking", bookingRoutes);
+app.use("/api/contact", contactRoutes);
 
 const PORT = process.env.PORT || 5000;
 
