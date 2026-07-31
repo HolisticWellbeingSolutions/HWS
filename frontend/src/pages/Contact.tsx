@@ -517,7 +517,7 @@ const Contact = () => {
                 <div className="space-y-4 text-[#053D57]">
                   <p className="leading-relaxed">
                     <strong className="text-[#053D57]">
-                      Holistic Well-being Services Ltd
+                      Holistic Well-being Solutions
                     </strong>
                     <br />
                     12-18 Theobalds Rd,
