@@ -22,7 +22,7 @@ const panels = [
       "Neurodiversity",
       "Psychometric Evaluations",
       "Addiction Support",
-      "Psychological Profiling and Mental Health Check Ups",
+      "Psychological Profiling and mental mealth check-ups",
     ],
     img: "https://images.unsplash.com/photo-1710322144652-bcea73280334?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "programmes/mental-health",
@@ -31,7 +31,7 @@ const panels = [
     id: 2,
     title: "Wellness and Longevity",
     description:
-      "We assess and support mental vitality and overall wellness, building integrated pathways that promote healthy ageing and long term performance.",
+      "We assess and support mental vitality and overall wellness, building integrated pathways that promote healthy ageing and long-term performance.",
     list: ["Mindfulness", "Sleep and Recovery", "Nutrition and Fitness"],
     img: "https://images.unsplash.com/photo-1649810617979-16001a60c89c?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "programmes/wellness-longevity",
@@ -308,7 +308,8 @@ const Home = ({isProgrammesHover,setIsProgrammesHover}) => {
       <ContentSection
         title="Our Philosophy: The Art of Wellbeing"
         content="At Holistic Wellbeing Solutions, we understand wellbeing as an art. It is the conscious cultivation of mental wellness, physical vitality, and emotional balance, expressed in a way that supports a life of purpose and composure."
-        additionalContent="Holistic wellbeing is the ultimate luxury. It is the refinement of body, mind, and spirit into an elegant state of harmony. By nurturing equanimity and purpose, it does not just extend life, it elevates it.?"
+        additionalContent="Holistic wellbeing is the ultimate luxury. It is the refinement of body, mind, and spirit into an elegant state of harmony. By nurturing equanimity and purpose, it does not just extend life; it elevates it.
+        "
         finalContent="Our approach recognises that true longevity is rooted in sustained wellbeing. By aligning psychological, physical, and emotional health, we help clients build the resilience and vitality required for a life of enduring performance."
         image="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         imageWidth="55%"
@@ -358,7 +359,7 @@ const Home = ({isProgrammesHover,setIsProgrammesHover}) => {
         animate={{ opacity: 1, y: 0 }}
         className=" flex items-center flex-col bg-transparent text-left py-10 md:py-[100px] my-8 md:my-16 px-5 md:px-12 lg:px-24"
       >
-        <p className="text-xl md:text-2xl pb-3 md:pb-5">Values & Principals</p>
+        <p className="text-xl md:text-2xl pb-3 md:pb-5">Values & Principles</p>
         <p className=" max-w-3xl text-[#053d57] text-sm md:text-base mb-4 md:mb-5 ">
           Confidentiality, scientific integrity, and discretion are central to
           our ethos. We believe luxury lies in precision and excellence, where
