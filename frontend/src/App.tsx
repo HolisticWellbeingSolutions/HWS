@@ -6,6 +6,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import type { ReactNode } from "react";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
 import Layout from "./components/layout/Layout";
@@ -31,10 +32,10 @@ import HolisticWellbeing from "./pages/holistic_wellbeing";
 
 const queryClient = new QueryClient();
 
-const AppContent = () => {
+export const AppContent = () => {
   const [isProgrammesHover, setIsProgrammesHover] = useState(false);
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <SeoManager />
       <Layout setIsProgrammesHover={setIsProgrammesHover} isProgrammesHover={isProgrammesHover}>
@@ -58,22 +59,31 @@ const AppContent = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
-    </BrowserRouter>  
+    </>
   );
 };
 
-const App = () => (
+/** Providers shared by the browser app and the build-time pre-renderer (entry-server.tsx). */
+export const AppProviders = ({ children }: { children: ReactNode }) => (
   <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <AppContent />
+          {children}
         </TooltipProvider>
       </QueryClientProvider>
     </Provider>
   </GoogleOAuthProvider>
+);
+
+const App = () => (
+  <AppProviders>
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
+  </AppProviders>
 );
 
 export default App;

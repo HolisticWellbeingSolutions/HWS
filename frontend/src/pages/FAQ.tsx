@@ -66,11 +66,27 @@ const FAQ = () => {
         'We combine ancient wisdom with modern science, offering evidence-based practices delivered by experienced practitioners. Our holistic approach addresses all aspects of well-being, and we create personalized pathways that honor your unique journey.',
     },
   ]
+  // FAQPage structured data: lets Google and AI search read every answer,
+  // even though answers are collapsed in the accordion.
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [...faqs, ...faqs2].map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  };
+
   return (
     <section
       className="md:mt-15 pb-12 md:pb-16 bg-[#176a79]/10 overflow-hidden"
       style={{ fontFamily: 'Josefin Sans' }}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }}
+      />
       <LandingComponent image='https://images.unsplash.com/photo-1722449304159-95aa3684c415?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' title='Frequently Asked Questions'
       titleSize="text-4xl md:text-5xl" />
       

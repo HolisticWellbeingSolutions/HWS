@@ -1,4 +1,5 @@
-import { defineConfig, type Plugin } from "vite";
+import { defineConfig, build as viteBuild, type Plugin } from "vite";
+import { pathToFileURL } from "url";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import fs from "fs";
@@ -11,6 +12,11 @@ import seo from "./src/seo/seoRoutes.json";
  * with that page's own <title>, description, canonical and social tags, so search
  * engines and link previews see correct metadata and a 200 status for every page.
  * Also writes dist/sitemap.xml and dist/404.html.
+ *
+ * Full-content pre-render: a second (server) build of src/entry-server.tsx renders
+ * each page's text into the HTML, so crawlers that don't run JavaScript (many AI
+ * search bots) can read it. If that step fails, the build still succeeds with
+ * head-only HTML, so the live site is never broken by it.
  */
 function seoPrerender(): Plugin {
   const esc = (s: string) =>
@@ -42,14 +48,41 @@ function seoPrerender(): Plugin {
   return {
     name: "seo-prerender",
     apply: "build",
-    closeBundle() {
+    async closeBundle() {
+      if (process.env.HWS_SSR_BUILD) return; // this is the nested server build
       const dist = path.resolve(__dirname, "dist");
       const templatePath = path.join(dist, "index.html");
       if (!fs.existsSync(templatePath)) return;
       const template = fs.readFileSync(templatePath, "utf8");
 
+      // Server-render page bodies (optional; falls back to empty <div id="root">)
+      let render: ((url: string) => string) | null = null;
+      const ssrOut = path.resolve(__dirname, "dist-ssr");
+      try {
+        process.env.HWS_SSR_BUILD = "1";
+        await viteBuild({
+          configFile: path.resolve(__dirname, "vite.config.ts"),
+          logLevel: "warn",
+          build: { ssr: "src/entry-server.tsx", outDir: ssrOut, emptyOutDir: true, copyPublicDir: false },
+        });
+        const mod = await import(pathToFileURL(path.join(ssrOut, "entry-server.js")).href);
+        render = mod.render;
+      } catch (e) {
+        console.warn("[seo-prerender] full-content pre-render skipped:", (e as Error).message);
+      } finally {
+        delete process.env.HWS_SSR_BUILD;
+      }
+
       for (const r of seo.routes) {
-        const html = applyMeta(template, r.title, r.description, urlFor(r.path));
+        let html = applyMeta(template, r.title, r.description, urlFor(r.path));
+        if (render) {
+          try {
+            const body = render(r.path);
+            html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
+          } catch (e) {
+            console.warn(`[seo-prerender] could not render ${r.path}:`, (e as Error).message);
+          }
+        }
         const outFile = r.path === "/" ? templatePath : path.join(dist, r.path.slice(1), "index.html");
         fs.mkdirSync(path.dirname(outFile), { recursive: true });
         fs.writeFileSync(outFile, html);
@@ -69,6 +102,7 @@ function seoPrerender(): Plugin {
           .join("\n") +
         `\n</urlset>\n`;
       fs.writeFileSync(path.join(dist, "sitemap.xml"), sitemap);
+      fs.rmSync(ssrOut, { recursive: true, force: true });
     },
   };
 }
