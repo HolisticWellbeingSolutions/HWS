@@ -1,0 +1,14 @@
+{
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/about", "destination": "/about/index.html" },
+    { "source": "/programmes/mental-health", "destination": "/programmes/mental-health/index.html" },
+    { "source": "/programmes/wellness-longevity", "destination": "/programmes/wellness-longevity/index.html" },
+    { "source": "/programmes/holistic-wellbeing", "destination": "/programmes/holistic-wellbeing/index.html" },
+    { "source": "/carepathway", "destination": "/carepathway/index.html" },
+    { "source": "/levels-of-engagement", "destination": "/levels-of-engagement/index.html" },
+    { "source": "/retreats-restorative", "destination": "/retreats-restorative/index.html" },
+    { "source": "/faq", "destination": "/faq/index.html" },
+    { "source": "/contact", "destination": "/contact/index.html" }
+  ]
+}

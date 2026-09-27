@@ -163,7 +163,7 @@ const Header = ({isProgrammesHover,setIsProgrammesHover}) => {
         <div className="flex-shrink-0 absolute left-1/2 -translate-x-1/2 md:relative md:left-0 md:translate-x-0">
           <img
             src={logo}
-            alt="Logo"
+            alt="Holistic Wellbeing Solutions logo"
             className="w-20 md:w-24 lg:w-28 cursor-pointer"
             onClick={() => navigate("/")}
           />

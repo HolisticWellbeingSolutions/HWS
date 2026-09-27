@@ -1,53 +1,84 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Holistic Wellbeing Solutions | Mind, Body & Soul Balance</title>
-
-    <meta
-      name="description"
-      content="Holistic Wellbeing Solutions offers professional therapy, counselling, and holistic wellness services supporting mind, body, and soul."
-    />
+    <!-- SEO tags below are rewritten per page at build time (see vite.config.ts → seoPrerender) -->
+    <title>Holistic Wellbeing Solutions London | Therapy & Wellbeing</title>
+    <meta name="description" content="Personalised mental health, psychotherapy, wellness and longevity programmes in London. Confidential, integrated care for mind, body and soul." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="author" content="Holistic Wellbeing Solutions" />
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://holisticwell-beingsolutions.com" />
+    <link rel="canonical" href="https://www.holisticwell-beingsolutions.com/" />
+    <link rel="alternate" hreflang="en-GB" href="https://www.holisticwell-beingsolutions.com/" />
 
     <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#193C55" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Holistic Wellbeing Solutions | Mind, Body & Soul Balance" />
-    <meta
-      property="og:description"
-      content="Professional therapy, counselling, and holistic wellbeing services."
-    />
+    <meta property="og:site_name" content="Holistic Wellbeing Solutions" />
+    <meta property="og:locale" content="en_GB" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://holisticwell-beingsolutions.com" />
-    <meta property="og:image" content="https://holisticwell-beingsolutions.com/logo.png" />
+    <meta property="og:title" content="Holistic Wellbeing Solutions London | Therapy & Wellbeing" />
+    <meta property="og:description" content="Personalised mental health, psychotherapy, wellness and longevity programmes in London. Confidential, integrated care for mind, body and soul." />
+    <meta property="og:url" content="https://www.holisticwell-beingsolutions.com/" />
+    <meta property="og:image" content="https://www.holisticwell-beingsolutions.com/logo.png" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Holistic Wellbeing Solutions" />
-    <meta
-      name="twitter:description"
-      content="Professional therapy and holistic wellbeing services."
-    />
-    <meta name="twitter:image" content="https://holisticwell-beingsolutions.com/logo.png" />
-    
+    <meta name="twitter:title" content="Holistic Wellbeing Solutions London | Therapy & Wellbeing" />
+    <meta name="twitter:description" content="Personalised mental health, psychotherapy, wellness and longevity programmes in London. Confidential, integrated care for mind, body and soul." />
+    <meta name="twitter:image" content="https://www.holisticwell-beingsolutions.com/logo.png" />
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Holistic Wellbeing Solutions",
-      "url": "https://holisticwell-beingsolutions.com",
-      "logo": "https://holisticwell-beingsolutions.com/logo.png"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.holisticwell-beingsolutions.com/#organization",
+          "name": "Holistic Wellbeing Solutions",
+          "alternateName": "HWS",
+          "url": "https://www.holisticwell-beingsolutions.com/",
+          "logo": "https://www.holisticwell-beingsolutions.com/logo.png",
+          "email": "admin@holisticwell-beingsolutions.com",
+          "telephone": "+44 7770 778104"
+        },
+        {
+          "@type": "MedicalBusiness",
+          "@id": "https://www.holisticwell-beingsolutions.com/#business",
+          "name": "Holistic Wellbeing Solutions",
+          "url": "https://www.holisticwell-beingsolutions.com/",
+          "image": "https://www.holisticwell-beingsolutions.com/logo.png",
+          "telephone": "+44 7770 778104",
+          "email": "admin@holisticwell-beingsolutions.com",
+          "parentOrganization": { "@id": "https://www.holisticwell-beingsolutions.com/#organization" },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12-18 Theobalds Road",
+            "addressLocality": "London",
+            "addressRegion": "Holborn",
+            "postalCode": "WC1X 8SL",
+            "addressCountry": "GB"
+          },
+          "areaServed": { "@type": "City", "name": "London" },
+          "knowsAbout": ["Psychotherapy", "Mental health", "ADHD assessment", "Autism assessment", "Wellbeing", "Longevity", "Wellness retreats"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.holisticwell-beingsolutions.com/#website",
+          "url": "https://www.holisticwell-beingsolutions.com/",
+          "name": "Holistic Wellbeing Solutions",
+          "inLanguage": "en-GB",
+          "publisher": { "@id": "https://www.holisticwell-beingsolutions.com/#organization" }
+        }
+      ]
     }
     </script>
   </head>

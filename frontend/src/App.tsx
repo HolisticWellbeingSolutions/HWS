@@ -10,6 +10,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 
 import Layout from "./components/layout/Layout";
 import ScrollToTop from "./components/ScrollToTop";
+import SeoManager from "./seo/SeoManager";
 import Home from "./pages/Home";
 import Programmes from "./pages/Programmes";
 import ExclusiveAccess from "./pages/ExclusiveAccess";
@@ -35,6 +36,7 @@ const AppContent = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <SeoManager />
       <Layout setIsProgrammesHover={setIsProgrammesHover} isProgrammesHover={isProgrammesHover}>
         <ContactButton />
         <Routes>

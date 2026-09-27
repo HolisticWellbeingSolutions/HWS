@@ -22,7 +22,7 @@ const panels = [
       "Neurodiversity",
       "Psychometric Evaluations",
       "Addiction Support",
-      "Psychological Profiling and mental mealth check-ups",
+      "Psychological Profiling and mental health check-ups",
     ],
     img: "https://images.unsplash.com/photo-1710322144652-bcea73280334?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "programmes/mental-health",

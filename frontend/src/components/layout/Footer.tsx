@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="flex items-center justify-center md:justify-start" onClick={() => (navigate("/"))}>
             <img
               src={logo2}
-              alt="Logo"
+              alt="Holistic Wellbeing Solutions logo"
               className="size-32 md:size-36 lg:size-40"
             />
           </div>
@@ -103,11 +103,11 @@ const Footer = () => {
               </li>
               <li>
                 <span>Phone: </span>
-                +44 7770 778104
+                <a href="tel:+447770778104" className="hover:underline">+44 7770 778104</a>
               </li>
               <li>
                 <span>Email: </span>
-                admin@holisticwell-beingsolutions.com
+                <a href="mailto:admin@holisticwell-beingsolutions.com" className="hover:underline">admin@holisticwell-beingsolutions.com</a>
               </li>
             </ul>
           </div>

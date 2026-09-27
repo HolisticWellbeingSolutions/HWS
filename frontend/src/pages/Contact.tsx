@@ -531,7 +531,7 @@ const Contact = () => {
                       <span className="block">
                         <strong className="text-[#053D57]">Phone:</strong>{" "}
                         <a
-                          href="tel:+41435051070"
+                          href="tel:+447770778104"
                           className="hover:text-[#053D57] transition-colors"
                         >
                           +44 7770 778104
@@ -540,7 +540,7 @@ const Contact = () => {
                       <span className="block">
                         <strong className="text-[#053D57]">Email:</strong>{" "}
                         <a
-                          href="mailto:info@hws.com"
+                          href="mailto:admin@holisticwell-beingsolutions.com"
                           className="hover:text-[#053D57] transition-colors"
                         >
                           admin@holisticwell-beingsolutions.com

@@ -1,0 +1,67 @@
+{
+  "siteUrl": "https://www.holisticwell-beingsolutions.com",
+  "siteName": "Holistic Wellbeing Solutions",
+  "ogImage": "https://www.holisticwell-beingsolutions.com/logo.png",
+  "routes": [
+    {
+      "path": "/",
+      "title": "Holistic Wellbeing Solutions London | Therapy & Wellbeing",
+      "description": "Personalised mental health, psychotherapy, wellness and longevity programmes in London. Confidential, integrated care for mind, body and soul.",
+      "priority": "1.0"
+    },
+    {
+      "path": "/about",
+      "title": "About Us | Holistic Wellbeing Solutions, London",
+      "description": "Learn about Holistic Wellbeing Solutions and our Personalised, Customised, Sustainable (PCS) approach to confidential mental health and wellbeing care in London.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/programmes/mental-health",
+      "title": "Mental Health Programmes & Psychotherapy London | HWS",
+      "description": "Evidence-based psychotherapy, psychological profiling, ADHD and autism assessments, and discreet recovery support in London, tailored to each individual.",
+      "priority": "0.9"
+    },
+    {
+      "path": "/programmes/wellness-longevity",
+      "title": "Wellness & Longevity Programmes London | HWS",
+      "description": "Wellness and longevity programmes in London combining nutrition, movement and mental vitality to support healthy ageing and long-term performance.",
+      "priority": "0.9"
+    },
+    {
+      "path": "/programmes/holistic-wellbeing",
+      "title": "Holistic Wellbeing Programmes London | HWS",
+      "description": "Holistic wellbeing programmes in London supporting physical, mental, emotional, social, spiritual and financial balance through personalised guidance.",
+      "priority": "0.9"
+    },
+    {
+      "path": "/carepathway",
+      "title": "Our Care Pathway | Holistic Wellbeing Solutions London",
+      "description": "How our care works: a confidential consultation, in-depth assessment, a personalised plan, coordinated multidisciplinary care and ongoing review.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/levels-of-engagement",
+      "title": "Levels of Engagement | Holistic Wellbeing Solutions",
+      "description": "Explore our levels of engagement, from focused support to Executive-Level programmes with advanced assessment, specialist therapies and ongoing review.",
+      "priority": "0.7"
+    },
+    {
+      "path": "/retreats-restorative",
+      "title": "Wellbeing Retreats & Restorative Experiences | HWS",
+      "description": "Restorative wellbeing retreats in serene settings around the world, designed around your mental, physical and emotional needs. Enquire today.",
+      "priority": "0.8"
+    },
+    {
+      "path": "/faq",
+      "title": "FAQs | Holistic Wellbeing Solutions London",
+      "description": "Answers to common questions about our programmes, confidentiality, bookings and how our personalised wellbeing and mental health care works.",
+      "priority": "0.6"
+    },
+    {
+      "path": "/contact",
+      "title": "Contact Us | Holistic Wellbeing Solutions, London",
+      "description": "Contact Holistic Wellbeing Solutions at 12-18 Theobalds Road, London WC1X 8SL. Call +44 7770 778104 or send a confidential enquiry online.",
+      "priority": "0.8"
+    }
+  ]
+}
