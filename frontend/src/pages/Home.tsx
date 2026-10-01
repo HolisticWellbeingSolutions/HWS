@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Users, Leaf } from "lucide-react";
 import { motion } from "framer-motion";
 import ContentSection from "../components/about/Content";
+import HomeFAQ from "../components/HomeFAQ";
 
 const heroImages = [
   "https://images.unsplash.com/photo-1760523374204-11d15f40c384?q=80&w=1076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -373,6 +374,8 @@ const Home = ({isProgrammesHover,setIsProgrammesHover}) => {
           with confidence.
         </p>
       </motion.div>
+
+      <HomeFAQ />
     </div>
   );
 };
