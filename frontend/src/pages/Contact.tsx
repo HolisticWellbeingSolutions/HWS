@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useToast } from "../components/ui/use-toast";
 import headquarters from "../assets/headquarters.jpg";
 import LandingComponent from "@/components/landingComponent";
+import { isValidPhone, submitEnquiry, ENQUIRY_ERROR_MESSAGE } from "@/lib/enquiry";
 import PrivacyPolicy from "../assets/PrivacyPolicy.pdf";
 import TermsofService from "../assets/PrivacyPolicy.pdf";
 
@@ -35,9 +36,10 @@ const Contact = () => {
     lastName: "",
     email: "",
     phone: "",
-    country: "Switzerland",
+    country: "United Kingdom",
     subject: "",
     message: "",
+    agree: false,
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -52,9 +54,13 @@ const Contact = () => {
     else if (!/\S+@\S+\.\S+/.test(formData.email))
       newErrors.email = "Enter a valid email";
     if (!formData.phone.trim()) newErrors.phone = "Phone is required";
+    else if (!isValidPhone(formData.phone))
+      newErrors.phone = "Enter a valid phone number, e.g. +44 7700 900123";
     if (!formData.country.trim()) newErrors.country = "Country is required";
     if (!formData.subject.trim()) newErrors.subject = "Subject is required";
     if (!formData.message.trim()) newErrors.message = "Message cannot be empty";
+    if (!formData.agree)
+      newErrors.agree = "Please agree to the Terms of Service and Privacy Policy";
     return newErrors;
   };
 
@@ -84,32 +90,27 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(`${API}/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          phone: formData.phone,
-          country: formData.country,
-          subject: formData.subject,
-          message: formData.message,
-        }),
+      const ok = await submitEnquiry({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        country: formData.country,
+        subject: formData.subject,
+        message: formData.message,
       });
 
-      if (response.ok) {
+      if (ok) {
         setIsSubmitted(true);
         setFormData({
           firstName: "",
           lastName: "",
           email: "",
           phone: "",
-          country: "Switzerland",
+          country: "United Kingdom",
           subject: "",
           message: "",
+          agree: false,
         });
         toast({
           title: "Message Sent!",
@@ -121,7 +122,7 @@ const Contact = () => {
     } catch (error) {
       toast({
         title: "Error",
-        description: "Something went wrong. Please try again.",
+        description: ENQUIRY_ERROR_MESSAGE,
         variant: "destructive",
       });
     } finally {
@@ -330,7 +331,8 @@ const Contact = () => {
                             : "border-[#053d57] focus:border-[#053d57] focus:ring-[#053d57]/20"
                         }`}
                         required
-                        placeholder="+41 78 123 45 67"
+                        placeholder="+44 7700 900123"
+                        autoComplete="tel"
                       />
                       {errors.phone && (
                         <p className="text-red-500 text-sm mt-2">
@@ -361,9 +363,9 @@ const Contact = () => {
                         }`}
                         required
                       >
-                        <option value="Switzerland">Switzerland</option>
-                        <option value="United States">United States</option>
                         <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="Switzerland">Switzerland</option>
                         <option value="Germany">Germany</option>
                         <option value="France">France</option>
                         <option value="Other">Other</option>
@@ -451,12 +453,26 @@ const Contact = () => {
                     custom={4}
                     className="flex items-start gap-3 text-[#053d57] text-sm"
                   >
-                    <input type="checkbox" className="mt-1 accent-[#053d57]" />
+                    <input
+                      type="checkbox"
+                      id="agree"
+                      name="agree"
+                      checked={formData.agree}
+                      onChange={handleChange}
+                      required
+                      aria-describedby={errors.agree ? "agree-error" : undefined}
+                      className="mt-1 accent-[#053d57]"
+                    />
                     <span>
                       I agree to <a className="underline cursor-pointer" onClick={() => handleDownload(TermsofService, "HWS Terms of Service.pdf")}>Terms of Service</a> and{' '}
                       <a className="underline cursor-pointer" onClick={() => handleDownload(PrivacyPolicy, "HWS Privacy Policy.pdf")}>Privacy Policy</a>.
                     </span>
                   </motion.div>
+                  {errors.agree && (
+                    <p id="agree-error" className="text-red-500 text-sm -mt-2">
+                      {errors.agree}
+                    </p>
+                  )}
                   {/* Submit Section */}
                   <div className="grid grid-cols-1 gap-4 items-center">
                     <div>
