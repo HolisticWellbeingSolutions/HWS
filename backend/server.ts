@@ -38,6 +38,11 @@ app.use('/api/auth', userRoutes);
 app.use("/api/booking", bookingRoutes);
 app.use("/api/contact", contactRoutes);
 
+// Lightweight endpoint used by the website to wake the server before a form is submitted.
+app.get("/api/health", (_req, res) => {
+  res.status(200).json({ ok: true });
+});
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

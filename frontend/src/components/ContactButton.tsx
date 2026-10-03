@@ -1,4 +1,5 @@
 'use client';
+import { isValidPhone, submitEnquiry, ENQUIRY_ERROR_MESSAGE } from "@/lib/enquiry";
 
 import { useState } from 'react';
 import { X, ChevronRight, Phone, Mail } from 'lucide-react';
@@ -26,13 +27,15 @@ const ContactButton = () => {
     firstName: '',
     lastName: '',
     email: '',
+    phone: '',
     subject: '',
     message: '',
   });
+  const [agree, setAgree] = useState(false);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [country, setCountry] = useState('Switzerland');
+  const [country, setCountry] = useState('United Kingdom');
 
   const validate = () => {
     const newErrors: { [key: string]: string } = {};
@@ -40,8 +43,11 @@ const ContactButton = () => {
     if (!formData.lastName.trim()) newErrors.lastName = 'Last Name is required';
     if (!formData.email.trim()) newErrors.email = 'Email is required';
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Enter a valid email';
+    if (!formData.phone.trim()) newErrors.phone = 'Phone is required';
+    else if (!isValidPhone(formData.phone)) newErrors.phone = 'Enter a valid phone number, e.g. +44 7700 900123';
     if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
     if (!formData.message.trim()) newErrors.message = 'Message cannot be empty';
+    if (!agree) newErrors.agree = 'Please agree to the Terms of Service and Privacy Policy';
     return newErrors;
   };
 
@@ -62,26 +68,20 @@ const ContactButton = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/contact`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            firstName: formData.firstName,
-            lastName: formData.lastName,
-            email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-          }),
-        }
-      );
+      const ok = await submitEnquiry({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        country,
+        subject: formData.subject,
+        message: formData.message,
+      });
 
-      if (response.ok) {
+      if (ok) {
         setIsSubmitted(true);
-        setFormData({ firstName: '', lastName: '', email: '', subject: '', message: '' });
+        setFormData({ firstName: '', lastName: '', email: '', phone: '', subject: '', message: '' });
+        setAgree(false);
         toast({
           title: 'Message Sent!',
           description: "We'll get back to you within 24 hours.",
@@ -90,7 +90,7 @@ const ContactButton = () => {
     } catch {
       toast({
         title: 'Error',
-        description: 'Something went wrong. Please try again.',
+        description: ENQUIRY_ERROR_MESSAGE,
         variant: 'destructive',
       });
     } finally {
@@ -276,6 +276,28 @@ const ContactButton = () => {
                         </>
                       )}
                       
+                      {i === 2 && (
+                        <div className="col-span-2">
+                          <label htmlFor="side-phone" className="block text-xs uppercase tracking-wide text-[#ebf0f2] mb-2">
+                            Phone*
+                          </label>
+                          <Input
+                            id="side-phone"
+                            name="phone"
+                            type="tel"
+                            autoComplete="tel"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="+44 7700 900123"
+                            className={`w-full bg-white/70 hover:bg-white text-[#0b343b]
+                              placeholder:text-[#0b343b]/60 focus:bg-white transition-all ${
+                                errors.phone ? 'border-red-500' : ''
+                              }`}
+                          />
+                          {errors.phone && <p className="text-red-200 text-xs mt-1">{errors.phone}</p>}
+                        </div>
+                      )}
+
                       {i === 3 && (
                         <div className="col-span-2">
                           <label className="block text-xs uppercase tracking-wide text-[#ebf0f2] mb-2">
@@ -300,12 +322,22 @@ const ContactButton = () => {
                     custom={4}
                     className="flex items-start gap-3 text-[#ebf0f2] text-sm"
                   >
-                    <input type="checkbox" className="mt-1 accent-[#ebf0f2]" />
+                    <input
+                      type="checkbox"
+                      id="side-agree"
+                      checked={agree}
+                      onChange={(e) => {
+                        setAgree(e.target.checked);
+                        if (errors.agree) setErrors({ ...errors, agree: '' });
+                      }}
+                      className="mt-1 accent-[#ebf0f2]"
+                    />
                     <span>
                       I agree to <a className="underline cursor-pointer" onClick={() => handleDownload(TermsofService, "HWS Terms of Service.pdf")}>Terms of Service</a> and{' '}
                       <a className="underline cursor-pointer" onClick={() => handleDownload(PrivacyPolicy, "HWS Privacy Policy.pdf")}>Privacy Policy</a>.
                     </span>
                   </motion.div>
+                  {errors.agree && <p className="text-red-200 text-xs -mt-2">{errors.agree}</p>}
 
                   <motion.div variants={fadeUp} custom={5}>
                     <Button

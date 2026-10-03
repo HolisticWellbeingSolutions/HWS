@@ -3,6 +3,7 @@ import { Facebook } from "lucide-react";
 import logo2 from "../../assets/logo.png";
 import whatsapp from "../../assets/whatsapp.svg";
 import linkedin from "../../assets/linkedin.svg";
+import { SOCIAL_LINKS } from "@/lib/social";
 import PrivacyPolicy from "../../assets/PrivacyPolicy.pdf";
 
 const Footer = () => {
@@ -123,19 +124,39 @@ const Footer = () => {
             px-4 md:pr-[100px] lg:pr-[380px]
           "
         >
-          <div className="cursor-pointer rounded-full size-8 md:size-10 flex items-center justify-center bg-[#ebf0f2] hover:bg-[#ebf0f2]/50">
-            <Facebook
-              size={20}
-              className="md:w-[25px] md:h-[25px]"
-              color="black"
-            />
-          </div>
-          <div className="cursor-pointer rounded-full size-8 md:size-10 flex items-center justify-center bg-[#ebf0f2] hover:bg-[#ebf0f2]/50">
-            <img src={whatsapp} alt="WhatsApp" className="size-4 md:size-5" />
-          </div>
-          <div className="cursor-pointer rounded-full size-8 md:size-10 flex items-center justify-center bg-[#ebf0f2] hover:bg-[#ebf0f2]/50">
-            <img src={linkedin} alt="LinkedIn" />
-          </div>
+          {SOCIAL_LINKS.facebook && (
+            <a
+              href={SOCIAL_LINKS.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Holistic Wellbeing Solutions on Facebook"
+              className="rounded-full size-8 md:size-10 flex items-center justify-center bg-[#ebf0f2] hover:bg-[#ebf0f2]/50"
+            >
+              <Facebook size={20} className="md:w-[25px] md:h-[25px]" color="black" />
+            </a>
+          )}
+          {SOCIAL_LINKS.whatsapp && (
+            <a
+              href={SOCIAL_LINKS.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Message Holistic Wellbeing Solutions on WhatsApp"
+              className="rounded-full size-8 md:size-10 flex items-center justify-center bg-[#ebf0f2] hover:bg-[#ebf0f2]/50"
+            >
+              <img src={whatsapp} alt="" className="size-4 md:size-5" />
+            </a>
+          )}
+          {SOCIAL_LINKS.linkedin && (
+            <a
+              href={SOCIAL_LINKS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Holistic Wellbeing Solutions on LinkedIn"
+              className="rounded-full size-8 md:size-10 flex items-center justify-center bg-[#ebf0f2] hover:bg-[#ebf0f2]/50"
+            >
+              <img src={linkedin} alt="" />
+            </a>
+          )}
         </div>
       </div>
 
