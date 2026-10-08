@@ -51,6 +51,7 @@ const Footer = () => {
             [
               { text: "Care Pathway", link: "/carepathway" },
               { text: "Levels of Engagement", link: "/levels-of-engagement" },
+              { text: "Private Clients", link: "/private-clients" },
               { text: "About", link: "/about" },
             ],
             [

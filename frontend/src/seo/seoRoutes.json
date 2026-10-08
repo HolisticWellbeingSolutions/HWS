@@ -29,8 +29,8 @@
     },
     {
       "path": "/programmes/holistic-wellbeing",
-      "title": "Holistic Wellbeing Programmes London | HWS",
-      "description": "Holistic wellbeing programmes in London supporting physical, mental, emotional, social, spiritual and financial balance through personalised guidance.",
+      "title": "Bespoke Holistic Wellbeing Programmes London | HWS",
+      "description": "Bespoke holistic wellbeing programmes in London, supporting physical, mental, emotional, social, spiritual and financial balance through personalised guidance.",
       "priority": "0.9"
     },
     {
@@ -41,9 +41,15 @@
     },
     {
       "path": "/levels-of-engagement",
-      "title": "Levels of Engagement | Holistic Wellbeing Solutions",
-      "description": "Explore our levels of engagement, from focused support to Executive-Level programmes with advanced assessment, specialist therapies and ongoing review.",
+      "title": "Levels of Engagement & Wellness Concierge | HWS London",
+      "description": "Private programmes, Executive-Level Engagements and our invitation-only luxury wellness concierge, delivered discreetly at home, on location or abroad.",
       "priority": "0.7"
+    },
+    {
+      "path": "/private-clients",
+      "title": "Private Wellbeing Consultant London | Bespoke Care | HWS",
+      "description": "Highly curated, bespoke private wellbeing management in London. Confidential, personalised programmes for private clients, with discreet support.",
+      "priority": "0.9"
     },
     {
       "path": "/retreats-restorative",

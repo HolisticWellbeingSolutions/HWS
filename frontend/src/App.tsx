@@ -29,6 +29,7 @@ import ContactButton from "@/components/ContactButton";
 import MentalHealth from "./pages/mental_health";
 import WellnessLongevity from "./pages/wellness_longevity";
 import HolisticWellbeing from "./pages/holistic_wellbeing";
+import PrivateClients from "./pages/PrivateClients";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +57,7 @@ export const AppContent = () => {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/private-clients" element={<PrivateClients />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
