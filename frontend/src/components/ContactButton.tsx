@@ -173,7 +173,7 @@ const ContactButton = () => {
                     <div>
                       <p className="text-[#ebf0f2]/90 font-medium">General Enquiries</p>
                       <p className="text-2xl font-bold text-[#ebf0f2]">+44 7770 778104</p>
-                      <p className="text-[#ebf0f2]">admin@holisticwell-beingsolutions.com</p>
+                      <p className="text-[#ebf0f2]">contact@holisticwell-beingsolutions.com</p>
                     </div>
                     
                   </div>

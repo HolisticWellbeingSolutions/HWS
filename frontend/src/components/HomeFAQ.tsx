@@ -37,7 +37,7 @@ const homeFaqs = [
   {
     question: "How do I get started?",
     answer:
-      "Contact us through the enquiry form, by phone on +44 7770 778104 or by email at admin@holisticwell-beingsolutions.com. We will arrange a private initial consultation at a time that suits you. A family member, assistant or adviser can also make the first enquiry on your behalf.",
+      "Contact us through the enquiry form, by phone on +44 7770 778104 or by email at contact@holisticwell-beingsolutions.com. We will arrange a private initial consultation at a time that suits you. A family member, assistant or adviser can also make the first enquiry on your behalf.",
   },
   {
     question: "Where are you based, and can sessions take place elsewhere?",

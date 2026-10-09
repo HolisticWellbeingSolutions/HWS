@@ -7,7 +7,7 @@ const MAILCHIMP_SERVER = process.env.MAILCHIMP_SERVER_PREFIX;
 const AUDIENCE_ID = process.env.MAILCHIMP_LIST_ID;
 
 // Where website enquiries are delivered. Override with CONTACT_TO on the server if needed.
-const CONTACT_TO = process.env.CONTACT_TO || 'admin@holisticwell-beingsolutions.com';
+const CONTACT_TO = process.env.CONTACT_TO || 'contact@holisticwell-beingsolutions.com';
 
 const clean = (value: unknown, max: number): string =>
   String(value ?? '').replace(/[\r\n]+/g, ' ').trim().slice(0, max);

@@ -4,7 +4,7 @@
 const API = import.meta.env.VITE_API_URL;
 
 export const CONTACT_PHONE = "+44 7770 778104";
-export const CONTACT_EMAIL = "admin@holisticwell-beingsolutions.com";
+export const CONTACT_EMAIL = "contact@holisticwell-beingsolutions.com";
 
 export interface EnquiryPayload {
   firstName: string;

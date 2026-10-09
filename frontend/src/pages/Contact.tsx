@@ -556,10 +556,10 @@ const Contact = () => {
                       <span className="block">
                         <strong className="text-[#053D57]">Email:</strong>{" "}
                         <a
-                          href="mailto:admin@holisticwell-beingsolutions.com"
+                          href="mailto:contact@holisticwell-beingsolutions.com"
                           className="hover:text-[#053D57] transition-colors"
                         >
-                          admin@holisticwell-beingsolutions.com
+                          contact@holisticwell-beingsolutions.com
                         </a>
                       </span>
                     </p>

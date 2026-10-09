@@ -108,7 +108,7 @@ const Footer = () => {
               </li>
               <li>
                 <span>Email: </span>
-                <a href="mailto:admin@holisticwell-beingsolutions.com" className="hover:underline">admin@holisticwell-beingsolutions.com</a>
+                <a href="mailto:contact@holisticwell-beingsolutions.com" className="hover:underline">contact@holisticwell-beingsolutions.com</a>
               </li>
             </ul>
           </div>
