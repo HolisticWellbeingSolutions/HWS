@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { CONTACT_EMAIL, CONTACT_PHONE } from "@/lib/enquiry";
 
 /**
- * Private Clients landing page.
- * Target searches: private wellbeing consultant London, private wellbeing management London,
+ * Private Clients & Families landing page.
+ * Target searches: private wellbeing management London, private wellbeing consultant London,
  * personalised wellbeing programme for private clients London, confidential wellbeing
  * consultant Central London, discreet wellbeing support for high profile clients.
  * All service details are taken from what HWS already states elsewhere on the site.
@@ -26,7 +26,7 @@ const steps = [
   },
   {
     title: "Coordinated support",
-    text: "Care delivered by our multidisciplinary team of clinicians, therapists and specialists, in person or remotely.",
+    text: "Care coordinated with the clinicians, therapists and specialists best suited to you, in person or remotely.",
   },
   {
     title: "Ongoing review",
@@ -38,7 +38,7 @@ const PrivateClients = () => (
   <div className="min-h-screen w-full flex flex-col text-[#053d57]" style={{ fontFamily: "Josefin Sans" }}>
     <LandingComponent
       image="https://images.unsplash.com/photo-1724230759479-32b57f30ba86?q=80&w=2070&auto=format&fit=crop"
-      title="Private Wellbeing Consultant in London"
+      title="Private Wellbeing Management in London"
       titleSize="text-4xl md:text-5xl"
       contactbutton={true}
       buttonText="Begin a Private Conversation"
@@ -48,12 +48,12 @@ const PrivateClients = () => (
     {/* Intro */}
     <section className="bg-[#176a79]/10 py-10 md:py-16 px-5 md:px-12 lg:px-24 flex justify-center">
       <div className="max-w-3xl space-y-4 text-sm md:text-base leading-relaxed">
-        <p className="text-lg md:text-xl">Highly curated. Bespoke. Confidential.</p>
+        <p className="text-lg md:text-xl">Bespoke. Personal. Confidential.</p>
         <p>
-          Holistic Wellbeing Solutions offers private clients a highly curated, bespoke approach to wellbeing.
-          From our practice in Holborn, Central London, we work one to one with individuals navigating demanding
-          professional or personal lives, bringing together psychotherapy, wellness and longevity, and holistic
-          wellbeing in a single, coordinated plan.
+          Holistic Wellbeing Solutions offers private clients and families a bespoke approach to wellbeing
+          management. From our practice in Holborn, Central London, we work with individuals and families
+          navigating demanding professional or personal lives, bringing together psychotherapy, wellness and
+          longevity, and holistic wellbeing in a single, coordinated plan.
         </p>
       </div>
     </section>
@@ -61,9 +61,10 @@ const PrivateClients = () => (
     {/* Private wellbeing management */}
     <section className="py-10 md:py-16 px-5 md:px-12 lg:px-24 flex justify-center">
       <div className="max-w-3xl space-y-4 text-sm md:text-base leading-relaxed">
-        <h2 className="text-2xl md:text-3xl">Private Wellbeing Management, Tailored to You</h2>
+        <h2 className="text-2xl md:text-3xl">Bespoke Private Wellbeing Management</h2>
         <p>
-          Our private wellbeing management service in London is built around you rather than a fixed package.
+          Our private wellbeing management service in London is built around you, or your family, rather than a
+          fixed package.
           Every programme follows our Personalised, Customised, Sustainable (PCS) approach: shaped around your goals,
           adapted as your needs change, and planned for lasting results.
         </p>
@@ -111,16 +112,30 @@ const PrivateClients = () => (
           practice or remotely, so your care continues while you travel or work abroad.
         </p>
         <p>
-          For moments that call for it, our invitation-only{" "}
+          For moments that call for it, our{" "}
           <Link to="/levels-of-engagement" className="underline underline-offset-4">Concierge Wellbeing Service</Link>{" "}
-          offers direct access to senior practitioners and specialists, delivered discreetly at your home, on
-          location or abroad.
+          offers support delivered discreetly at your home, on location or abroad.
+        </p>
+      </div>
+    </section>
+
+    {/* Families */}
+    <section className="bg-[#176a79]/10 py-10 md:py-16 px-5 md:px-12 lg:px-24 flex justify-center">
+      <div className="max-w-3xl space-y-4 text-sm md:text-base leading-relaxed">
+        <h2 className="text-2xl md:text-3xl">Wellbeing Support for Private Clients &amp; Families</h2>
+        <p>
+          Wellbeing rarely sits with one person alone. We support individuals and, where it helps, their wider
+          family, with each person's care planned around their own needs and kept confidential.
+        </p>
+        <p>
+          Whether you are seeking support for yourself, a partner or another family member, we begin with a
+          private conversation to understand what matters most and agree the right way forward.
         </p>
       </div>
     </section>
 
     {/* Discreet support */}
-    <section className="bg-[#176a79]/10 py-10 md:py-16 px-5 md:px-12 lg:px-24 flex justify-center">
+    <section className="py-10 md:py-16 px-5 md:px-12 lg:px-24 flex justify-center">
       <div className="max-w-3xl space-y-4 text-sm md:text-base leading-relaxed">
         <h2 className="text-2xl md:text-3xl">Discreet Wellbeing Support for High-Profile Clients</h2>
         <p>
@@ -128,14 +143,18 @@ const PrivateClients = () => (
           practitioners directly involved in your care, and only with your consent.
         </p>
         <p>
-          A family member, personal assistant or adviser can make the first enquiry on your behalf, and we agree
-          in advance how information is shared and who coordinates each step.
+          A family member, personal assistant or adviser can make the first enquiry on your behalf. With your
+          consent, we agree in advance how information is shared and who coordinates each step.
+        </p>
+        <p>
+          As with all UK therapy services, there are rare legal and safeguarding exceptions to confidentiality,
+          such as a serious risk of harm. We explain these clearly at your first consultation.
         </p>
       </div>
     </section>
 
     {/* Call to action */}
-    <section className="py-12 md:py-20 px-5 md:px-12 lg:px-24 flex justify-center text-center">
+    <section className="bg-[#176a79]/10 py-12 md:py-20 px-5 md:px-12 lg:px-24 flex justify-center text-center">
       <div className="max-w-2xl space-y-5">
         <h2 className="text-2xl md:text-3xl">Begin a Private Conversation</h2>
         <p className="text-sm md:text-base leading-relaxed">
