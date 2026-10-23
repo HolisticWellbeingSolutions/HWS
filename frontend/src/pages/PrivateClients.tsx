@@ -98,8 +98,9 @@ const PrivateClients = () => (
     <LandingComponent
       image="https://images.unsplash.com/photo-1724230759479-32b57f30ba86?q=80&w=2070&auto=format&fit=crop"
       title="Private Wellbeing Management for Individuals and Families"
-      titleSize="text-3xl md:text-5xl max-w-5xl leading-tight"
+      titleSize="text-3xl md:text-5xl max-w-5xl leading-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.45)]"
       contactbutton={true}
+      overlay={true}
       buttonText="Begin a Private Conversation"
       textcolor="text-[#ebf0f2]"
     />
@@ -171,7 +172,6 @@ const PrivateClients = () => (
         <div className="grid gap-4 md:gap-5 lg:grid-cols-3">
           {pillars.map((p) => (
             <article key={p.no} className="bg-white p-6 shadow-sm flex flex-col">
-              <p className="text-xs tracking-[0.2em] text-[#176a79] mb-1">{p.no}</p>
               <h3 className="text-xl mb-1">{p.name}</h3>
               <p className="text-sm text-[#176a79] mb-3">{p.tagline}</p>
               <div className="space-y-3 text-sm leading-relaxed flex-1">
@@ -206,15 +206,14 @@ const PrivateClients = () => (
             identifying appropriate support and reviewing progress over time.
           </p>
         </div>
-        <ol className="grid gap-3 md:gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {steps.map((step, i) => (
+        <ul className="grid gap-3 md:gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {steps.map((step) => (
             <li key={step.title} className={`${tint} p-5`}>
-              <p className="text-xs tracking-[0.2em] text-[#176a79] mb-1">0{i + 1}</p>
               <h3 className="text-lg mb-2">{step.title}</h3>
               <p className="text-sm leading-relaxed">{step.text}</p>
             </li>
           ))}
-        </ol>
+        </ul>
         <div className={`${body} mx-auto`}>
           <Closing>A considered process. A personal relationship. Care that evolves with you.</Closing>
           <Link to="/carepathway" className="underline underline-offset-4 text-sm">Read more about our care pathway</Link>

@@ -12,6 +12,7 @@ interface LandingComponentProps {
     link?:string;
     textcolor?:string;
     titleSize?:string;
+    overlay?:boolean;
 
 }
 
@@ -25,7 +26,7 @@ const fadeUpVariant: Variants = {
   },
 };
 
-function LandingComponent({ image, title, subtitle, description, contactbutton, textcolor,buttonText="Speak with Us", link="/contact", titleSize="text-5xl md:text-6xl" }: LandingComponentProps) {
+function LandingComponent({ image, title, subtitle, description, contactbutton, textcolor,buttonText="Speak with Us", link="/contact", titleSize="text-5xl md:text-6xl", overlay=false }: LandingComponentProps) {
 
   return (
     <motion.div
@@ -43,6 +44,7 @@ function LandingComponent({ image, title, subtitle, description, contactbutton, 
           backgroundImage: `url('${image}')`,
         }}
       />
+      {overlay && <div className="absolute inset-0 bg-[#053d57]/55" aria-hidden="true" />}
 
       <div className="relative flex flex-col items-center justify-center h-full z-10 text-center text-white px-4 md:px-6">
         <div className=" flex-1 flex items-center justify-center">
