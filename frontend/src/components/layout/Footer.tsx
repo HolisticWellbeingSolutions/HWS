@@ -52,6 +52,7 @@ const Footer = () => {
               { text: "Care Pathway", link: "/carepathway" },
               { text: "Levels of Engagement", link: "/levels-of-engagement" },
               { text: "Private Clients & Families", link: "/private-clients" },
+              { text: "Family Offices", link: "/family-offices" },
               { text: "About", link: "/about" },
             ],
             [

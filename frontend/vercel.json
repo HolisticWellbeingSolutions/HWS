@@ -40,6 +40,10 @@
     {
       "source": "/private-clients",
       "destination": "/private-clients/index.html"
+    },
+    {
+      "source": "/family-offices",
+      "destination": "/family-offices/index.html"
     }
   ]
 }
