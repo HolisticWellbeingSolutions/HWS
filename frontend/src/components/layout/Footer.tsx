@@ -53,6 +53,7 @@ const Footer = () => {
               { text: "Levels of Engagement", link: "/levels-of-engagement" },
               { text: "Private Clients & Families", link: "/private-clients" },
               { text: "Family Offices", link: "/family-offices" },
+              { text: "Executives", link: "/executives" },
               { text: "About", link: "/about" },
             ],
             [

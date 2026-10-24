@@ -63,6 +63,7 @@ const Header = ({isProgrammesHover,setIsProgrammesHover}) => {
     { name: "Levels of Engagement", path: "/levels-of-engagement" },
     { name: "Private Clients & Families", path: "/private-clients" },
     { name: "Family Offices", path: "/family-offices" },
+    { name: "Executives", path: "/executives" },
     { name: "HWS Retreat", path: "/retreats-restorative" },
   ];
 

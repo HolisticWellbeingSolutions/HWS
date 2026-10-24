@@ -44,6 +44,10 @@
     {
       "source": "/family-offices",
       "destination": "/family-offices/index.html"
+    },
+    {
+      "source": "/executives",
+      "destination": "/executives/index.html"
     }
   ]
 }
