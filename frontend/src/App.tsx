@@ -32,6 +32,7 @@ import HolisticWellbeing from "./pages/holistic_wellbeing";
 import PrivateClients from "./pages/PrivateClients";
 import FamilyOffices from "./pages/FamilyOffices";
 import Executives from "./pages/Executives";
+import CentralLondon from "./pages/CentralLondon";
 
 const queryClient = new QueryClient();
 
@@ -62,6 +63,7 @@ export const AppContent = () => {
           <Route path="/private-clients" element={<PrivateClients />} />
           <Route path="/family-offices" element={<FamilyOffices />} />
           <Route path="/executives" element={<Executives />} />
+          <Route path="/central-london" element={<CentralLondon />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

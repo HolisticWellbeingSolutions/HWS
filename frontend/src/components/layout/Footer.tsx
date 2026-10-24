@@ -58,6 +58,7 @@ const Footer = () => {
             ],
             [
               { text: "Contact", link: "/contact" },
+              { text: "Central London", link: "/central-london" },
               { text: "FAQ", link: "/faq" },
               { text: "Privacy Policy", onclick: () => handleDownload(PrivacyPolicy, "HWS Privacy Policy.pdf")  },
             ],

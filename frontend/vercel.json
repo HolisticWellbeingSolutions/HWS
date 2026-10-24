@@ -48,6 +48,10 @@
     {
       "source": "/executives",
       "destination": "/executives/index.html"
+    },
+    {
+      "source": "/central-london",
+      "destination": "/central-london/index.html"
     }
   ]
 }
