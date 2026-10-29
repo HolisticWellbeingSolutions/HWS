@@ -8,8 +8,8 @@ import ContentSection from "../components/about/Content";
 import HomeFAQ from "../components/HomeFAQ";
 
 const heroImages = [
-  "https://images.unsplash.com/photo-1760523374204-11d15f40c384?q=80&w=1076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1540277584993-3d4c0c3a51b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1760523374204-11d15f40c384?q=70&w=1076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1540277584993-3d4c0c3a51b7?q=70&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 
 const panels = [
@@ -25,7 +25,7 @@ const panels = [
       "Addiction Support",
       "Psychological Profiling and mental health check-ups",
     ],
-    img: "https://images.unsplash.com/photo-1710322144652-bcea73280334?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1710322144652-bcea73280334?q=70&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "programmes/mental-health",
   },
   {
@@ -34,7 +34,7 @@ const panels = [
     description:
       "We assess and support mental vitality and overall wellness, building integrated pathways that promote healthy ageing and long-term performance.",
     list: ["Mindfulness", "Sleep and Recovery", "Nutrition and Fitness"],
-    img: "https://images.unsplash.com/photo-1649810617979-16001a60c89c?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1649810617979-16001a60c89c?q=70&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "programmes/wellness-longevity",
   },
   {
@@ -49,7 +49,7 @@ const panels = [
       "HWS Signature Features",
       "Retreat Experiences in serene and restorative settings around the world",
     ],
-    img: "https://images.unsplash.com/photo-1444312645910-ffa973656eba?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1444312645910-ffa973656eba?q=70&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "programmes/holistic-wellbeing",
   },
 ];
@@ -174,11 +174,12 @@ const HoverExpandPanels: React.FC<{
             <div key={panel.id} className="w-full ">
               <button
                 onClick={() => setOpenMobile(isOpen ? null : index)}
+                aria-expanded={isOpen}
                 className="w-full flex items-center justify-between p-4 md:p-6 bg-[#f5f0e6]"
               >
-                <h2 className="text-base md:text-lg font-semibold text-[#3F2A1D]">
+                <span className="text-base md:text-lg font-semibold text-[#3F2A1D]">
                   {panel.title}
-                </h2>
+                </span>
 
                 <ChevronDown
                   className={`
@@ -290,6 +291,9 @@ const Home = ({isProgrammesHover,setIsProgrammesHover}) => {
         >
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-[#27b7d1]">
             HOLISTIC WELLBEING SOLUTIONS
+            <span className="block mt-2 text-base md:text-lg lg:text-xl font-medium tracking-wide">
+              Therapy, Psychotherapy &amp; Wellbeing in London
+            </span>
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl italic text-[#27b7d1] mb-6 md:mb-8 max-w-2xl mx-auto">
             The Art of Wellbeing
@@ -312,7 +316,7 @@ const Home = ({isProgrammesHover,setIsProgrammesHover}) => {
         additionalContent="Holistic wellbeing is the ultimate luxury. It is the refinement of body, mind, and spirit into an elegant state of harmony. By nurturing equanimity and purpose, it does not just extend life; it elevates it.
         "
         finalContent="Our approach recognises that true longevity is rooted in sustained wellbeing. By aligning psychological, physical, and emotional health, we help clients build the resilience and vitality required for a life of enduring performance."
-        image="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=70&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         imageWidth="55%"
         textWidth="45%"
         imagePositionX="100%"

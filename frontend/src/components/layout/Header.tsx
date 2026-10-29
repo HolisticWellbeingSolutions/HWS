@@ -83,6 +83,8 @@ const Header = ({isProgrammesHover,setIsProgrammesHover}) => {
         <button
           className="md:hidden p-2 z-10"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -176,6 +178,7 @@ const Header = ({isProgrammesHover,setIsProgrammesHover}) => {
         <button 
           className="md:hidden p-2 z-10"
           onClick={() => setIsSearchOpen(!isSearchOpen)}
+          aria-label="Search"
         >
           <Search className="w-5 h-5" />
         </button>
@@ -277,8 +280,8 @@ const Header = ({isProgrammesHover,setIsProgrammesHover}) => {
             CONTACT
           </Link>
 
-          <button>
-            <Search className="w-5 h-5" onClick={() => setIsSearchOpen(!isSearchOpen)} />
+          <button aria-label="Search" onClick={() => setIsSearchOpen(!isSearchOpen)}>
+            <Search className="w-5 h-5" />
           </button>
         </div>
       </div>
