@@ -57,17 +57,14 @@ const stages = [
 
 const pathway = [
   {
-    no: "01",
     title: "Understanding Your Needs",
     text: "Every relationship begins with a confidential conversation to understand your concerns, personal circumstances and aspirations. This provides the foundation for determining the most appropriate level of support.",
   },
   {
-    no: "02",
     title: "Developing Your Programme",
     text: "Where appropriate, specialist assessments inform a carefully tailored programme, drawing upon the expertise and wellbeing disciplines most relevant to your needs.",
   },
   {
-    no: "03",
     title: "Supporting Your Progress",
     text: "Care is delivered through a combination of therapeutic engagement, specialist guidance and periodic review. As your needs evolve, your programme may be refined to maintain its relevance and effectiveness.",
   },
@@ -272,15 +269,14 @@ const PrivateClients = () => (
             personalised, customised and sustainable care.
           </p>
         </div>
-        <ol className="grid gap-3 md:gap-4 lg:grid-cols-3">
+        <ul className="grid gap-3 md:gap-4 lg:grid-cols-3">
           {pathway.map((s) => (
-            <li key={s.no} className="bg-white p-5 shadow-sm">
-              <p className="text-sm text-[#176a79] mb-1">{s.no}</p>
+            <li key={s.title} className="bg-white p-5 shadow-sm">
               <h3 className="text-lg mb-2">{s.title}</h3>
               <p className="text-sm leading-relaxed">{s.text}</p>
             </li>
           ))}
-        </ol>
+        </ul>
         <div className={`${body} mx-auto`}>
           <CtaLink to="/carepathway">Discover the HWS Care Pathway</CtaLink>
         </div>
