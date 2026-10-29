@@ -7,7 +7,7 @@ const aboutSections = [
       "Our work is grounded in precision, privacy, and purpose. We recognise that wellbeing is dynamic, requiring insight, empathy, and exceptional expertise to sustain it over time.",
     finalContent: "",
     image:
-      "https://images.unsplash.com/photo-1551158423-100d177bfaae?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1551158423-100d177bfaae?q=70&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     reverse: false,
 
     // NEW
@@ -38,7 +38,7 @@ const aboutSections = [
     additionalContent:
       "This multidisciplinary expertise blends scientific rigour with human understanding, ensuring every client receives care that is both precise and personally resonant.",
     image:
-      "https://images.unsplash.com/photo-1582478134397-2b32c067e22d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1582478134397-2b32c067e22d?q=70&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     reverse: true,
 
     // NEW

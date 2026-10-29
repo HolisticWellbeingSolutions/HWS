@@ -31,7 +31,7 @@ const About = () => {
   return (
     <div className="min-h-screen w-full md:pt-24 overflow-hidden md:-mt-16">
       {/* Hero Section */}
-      <LandingComponent image="https://images.unsplash.com/photo-1727774606654-dce1f8f8a0da?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" title="THE ART OF WELLBEING"
+      <LandingComponent image="https://images.unsplash.com/photo-1727774606654-dce1f8f8a0da?q=70&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" title="THE ART OF WELLBEING"
       titleSize="text-5xl md:text-6xl italic" />
 
       {/* Main Content */}
@@ -44,7 +44,7 @@ const About = () => {
       >
         <ContentSection {...aboutSectionsData[0]} />
         <AGEModelNew />
-        <PCSParadigm img = "https://images.unsplash.com/photo-1694758110913-29a08297fbb1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        <PCSParadigm img = "https://images.unsplash.com/photo-1694758110913-29a08297fbb1?q=70&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
         title = "The PCS Paradigm" description="The Personalised, Customised, Sustainable (PCS) Paradigm shapes every aspect of care at HWS. It ensures that each journey, from assessment through long-term support, is developed as a thoughtful and evolving partnership. It transforms care from isolated interventions into a continuous and adaptive relationship." features={[
     {
       title: "Mind & Body Balance",

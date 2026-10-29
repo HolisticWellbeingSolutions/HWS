@@ -32,7 +32,7 @@ function PCSParadigm({
             "
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1694758110913-29a08297fbb1?q=80&w=1170&auto=format&fit=crop')",
+                "url('https://images.unsplash.com/photo-1694758110913-29a08297fbb1?q=70&w=1170&auto=format&fit=crop')",
             }}
           />
 

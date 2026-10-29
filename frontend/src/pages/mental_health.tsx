@@ -233,8 +233,8 @@ const ModifiedContentSection = ({
           viewport={{ once: true }}
         >
           <ImageOverlayCarousel2
-          images= {["https://images.unsplash.com/photo-1686002701992-2720b6a671b8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG5hdnklMjBibHVlJTIwd2F0ZXJ8ZW58MHwwfDB8fHwy","https://images.unsplash.com/photo-1613427992290-7baa994cfee8?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1608371743110-24952cd89b0f?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1686226347032-b82efa11af93?q=80&w=2831&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          images= {["https://images.unsplash.com/photo-1686002701992-2720b6a671b8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG5hdnklMjBibHVlJTIwd2F0ZXJ8ZW58MHwwfDB8fHwy","https://images.unsplash.com/photo-1613427992290-7baa994cfee8?q=70&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1608371743110-24952cd89b0f?q=70&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1686226347032-b82efa11af93?q=70&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           ]}
             items={[
               "Cognitive Behavioural Therapy (CBT)",
@@ -314,7 +314,7 @@ const MentalHealth = () => {
   return (
     <motion.div style={{ fontFamily: "Josefin Sans" }}>
       <LandingComponent
-        image="https://images.unsplash.com/photo-1653130892581-7c0ae1f4e8e0?q=80&w=1170&auto=format&fit=crop"
+        image="https://images.unsplash.com/photo-1653130892581-7c0ae1f4e8e0?q=70&w=1170&auto=format&fit=crop"
         textcolor="text-[]"
       />
 
@@ -334,10 +334,10 @@ const MentalHealth = () => {
 
       <ImageOverlayCarouse
         images={[
-          "https://images.unsplash.com/photo-1635715070096-b4655b94edee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1574254706427-213d446e2f2b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1758597256447-a3b6b98b18c7?q=80&w=2026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1557644978-f61037cfbe49?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          "https://images.unsplash.com/photo-1635715070096-b4655b94edee?q=70&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1574254706427-213d446e2f2b?q=70&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1758597256447-a3b6b98b18c7?q=70&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1557644978-f61037cfbe49?q=70&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ]}
         items={[
           "Depression and low mood",
@@ -347,7 +347,7 @@ const MentalHealth = () => {
           "generalised anxiety",
           "Social anxiety",
           "Health anxiety",
-          "Body dismorphic disorder",
+          "Body dysmorphic disorder",
           "Emetophobia",
           "Disordered eating",
           "Burnout and exhaustion",
@@ -379,7 +379,7 @@ const MentalHealth = () => {
       </div>
 
       <ContentSection
-        image="https://images.unsplash.com/photo-1707340726386-611f5e9398f3?q=80&w=1170&auto=format&fit=crop"
+        image="https://images.unsplash.com/photo-1707340726386-611f5e9398f3?q=70&w=1170&auto=format&fit=crop"
         title="Addiction and Recovery"
         content="We offer discreet and structured support for individuals navigating dependency or early recovery. Our approach focuses on understanding readiness, identifying triggers and resilience factors, and developing tailored recovery plans that align with personal and professional demands."
         button="Begin a Private Conversation"
@@ -395,7 +395,7 @@ const MentalHealth = () => {
       />
 
       <ContentSection
-        image="https://images.unsplash.com/photo-1744313001460-68c6f67625f0?q=80&w=1170&auto=format&fit=crop"
+        image="https://images.unsplash.com/photo-1744313001460-68c6f67625f0?q=70&w=1170&auto=format&fit=crop"
         title="Neurodiversity"
         content="We provide sensitive assessments and tailored support for individuals with ADHD or Autism Spectrum presentations. Our programmes help improve self-understanding, strengthen executive functioning, and enhance day-to-day performance."
         button="Begin a Private Conversation"

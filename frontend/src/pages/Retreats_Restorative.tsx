@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const panels = [
   {
     id: 1,
-    img: "https://images.unsplash.com/photo-1607836046730-3317bd58a31b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1607836046730-3317bd58a31b?q=70&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const panels = [
   },
   {
     id: 4,
-    img: "https://images.unsplash.com/photo-1658737980934-5868142b06a2?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1658737980934-5868142b06a2?q=70&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -164,7 +164,7 @@ const Retreats_Restorative: React.FC = () => {
       style={{ fontFamily: "Josefin Sans" }}
     >
       <LandingComponent
-        image="https://images.unsplash.com/photo-1556046785-90b800412d80?auto=format&fit=crop&q=80&w=2000"
+        image="https://images.unsplash.com/photo-1556046785-90b800412d80?auto=format&fit=crop&q=70&w=1600"
         title="Retreats &amp; Restorative Escapes"
         titleSize="text-5xl"
       />

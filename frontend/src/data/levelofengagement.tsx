@@ -10,7 +10,7 @@ const contents = [
     finalContent:
       "These programmes may be short-term and objective-led or established as ongoing support for those seeking sustained, specialist care.",
     image:
-      "https://images.unsplash.com/photo-1724230759479-32b57f30ba86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1724230759479-32b57f30ba86?q=70&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     button: "Arrange a Private Consultation",
     imageWidth: "58%",
     textWidth: "42%",
@@ -30,7 +30,7 @@ const contents = [
       "This is a structured, highly personalised wellbeing journey for those seeking meaningful progress, accountability, and a fully integrated approach.",
     reverse: true,
     image:
-      "https://images.unsplash.com/photo-1592494804071-faea15d93a8a?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1592494804071-faea15d93a8a?q=70&w=1600&auto=format&fit=crop",
     button: "Arrange a Private Consultation",
     imageWidth: "40%",
     textWidth: "60%",
@@ -49,7 +49,7 @@ const contents = [
     finalContent:
       "For those seeking deeper recalibration, private restorative retreats integrate therapeutic insight with rest, reflection, and curated practice in exceptional environments.",
     image:
-      "https://images.unsplash.com/photo-1660673507748-6b66c15cb96d?q=80&w=1170&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1660673507748-6b66c15cb96d?q=70&w=1170&auto=format&fit=crop",
     button: "Request a Private Appointment",
     imageWidth: "55%",
     textWidth: "45%",
@@ -64,7 +64,7 @@ const contents = [
       "When appropriate, clients may also access our restorative retreats, held in exceptional settings and curated to offer deeper reflection, recovery, and renewal.",
     additionalContent:"Each retreat is curated and led by senior HWS practitioners and distinguished specialists, offering a deeply personalised experience grounded in clinical expertise and refined practice. Thoughtfully integrating therapeutic dialogue and restorative stillness, every programme is designed to enhance wellbeing, sharpen perspective, and cultivate enduring clarity of purpose.",
     image:
-      "https://images.unsplash.com/photo-1611530624100-5fc87c9d5baa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1611530624100-5fc87c9d5baa?q=70&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     button: "Learn About Our Retreats",
     imageWidth: "55%",
     textWidth: "45%",

@@ -3,7 +3,7 @@ import React from "react";
 const stepdata = [
   {
     image:
-      "https://images.unsplash.com/photo-1527904188605-3424bcc2d107?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1527904188605-3424bcc2d107?q=70&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     heading: "Awareness",
     description:
       "Awareness is the foundation of transformation. It enables individuals to recognise patterns, understand their responses, and live with intention.",
@@ -11,7 +11,7 @@ const stepdata = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1517384084767-6bc118943770?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1517384084767-6bc118943770?q=70&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     heading: "Grace",
     description:
       "Grace represents balance in motion. It is the ability to move through life’s complexities with composure, empathy, and emotional harmony.",
@@ -19,7 +19,7 @@ const stepdata = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1621685474063-40b5904d330c?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1621685474063-40b5904d330c?q=70&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     heading: "Energy",
     description:
       "Energy is the expression of vitality and purpose. By supporting physical health, cognitive clarity, and emotional resilience, clients sustain performance over time.",

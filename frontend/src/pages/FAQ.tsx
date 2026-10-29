@@ -87,7 +87,7 @@ const FAQ = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }}
       />
-      <LandingComponent image='https://images.unsplash.com/photo-1722449304159-95aa3684c415?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' title='Frequently Asked Questions'
+      <LandingComponent image='https://images.unsplash.com/photo-1722449304159-95aa3684c415?q=70&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' title='Frequently Asked Questions'
       titleSize="text-4xl md:text-5xl" />
       
       {/* --- MODIFIED CONTAINER CLASS --- */}

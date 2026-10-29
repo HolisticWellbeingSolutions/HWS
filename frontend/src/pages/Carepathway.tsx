@@ -12,7 +12,7 @@ const panels = [
       title: "PRIVATE CONSULTATION",
       description:
         "We begin with a confidential, in-depth discussion to understand your goals, needs, and context. This initial dialogue establishes the foundation for personalised care and helps us identify the most relevant areas of focus.",
-      img: "https://images.unsplash.com/photo-1761504556503-e149cbbf8161?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://images.unsplash.com/photo-1761504556503-e149cbbf8161?q=70&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const panels = [
       title: "CURATED ASSESSMENTS",
       description:
         "Drawing from our three wellbeing pillars, we select advanced diagnostics to build a comprehensive understanding of your psychological, physical, and emotional profile. These assessments allow us to identify key strengths, patterns, and areas for targeted support.",
-      img: "https://images.unsplash.com/photo-1624351046650-718e5d00658b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://images.unsplash.com/photo-1624351046650-718e5d00658b?q=70&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ const panels = [
       title: "PERSONALISED CARE PATHWAY",
       description:
         "We develop a structured roadmap that integrates the modalities, therapies, and experts most suited to your needs. Each component is chosen to foster meaningful, measurable progress and to create balanced and sustainable change over time.",
-      img: "https://images.unsplash.com/photo-1756507505199-25698e3282d2?q=80&w=1258&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://images.unsplash.com/photo-1756507505199-25698e3282d2?q=70&w=1258&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 4,
@@ -36,7 +36,7 @@ const panels = [
       title: "TARGETED INTERVENTION AND SUPPORT",
       description:
         "Our multidisciplinary team delivers care with precision and empathy, coordinating expertise across clinicians, therapists, and specialists. This ensures that each intervention is coherent, aligned, and responsive to your evolving goals.",
-      img: "https://images.unsplash.com/photo-1630986833044-410362e7ee28?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://images.unsplash.com/photo-1630986833044-410362e7ee28?q=70&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 5,
@@ -44,7 +44,7 @@ const panels = [
       title: "ONGOING REVIEW AND EVOLUTION",
       description:
         "We maintain regular follow-ups to refine, adjust, or deepen the programme as required. This ensures that your pathway remains aligned with shifting priorities, lifestyle demands, and personal growth.",
-      img: "https://images.unsplash.com/photo-1602780669668-241ff10e6329?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://images.unsplash.com/photo-1602780669668-241ff10e6329?q=70&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
@@ -56,7 +56,7 @@ const CarePathway = ({isProgrammesHover,setIsProgrammesHover}) => {
   return (
     <div className="min-h-screen bg-[#176a79]/10" style={{fontFamily:"Josefin Sans"}}>
       <div className="">
-        <LandingComponent image="https://images.unsplash.com/photo-1709055022660-46f701fe6be2?q=80&w=1339&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" title="Care Pathway" 
+        <LandingComponent image="https://images.unsplash.com/photo-1709055022660-46f701fe6be2?q=70&w=1339&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" title="Care Pathway" 
         buttonText="Start your Journey" link="/levels-of-engagement"
         textcolor="text-[#ebf0f2]"/>
 

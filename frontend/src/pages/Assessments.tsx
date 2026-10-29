@@ -32,7 +32,7 @@ const CardComponentReverse = ({ index, image, title, description, points }: Prog
   return (
     <motion.div
       className="w-full h-full flex flex-col md:flex-row-reverse items-center bg-[#E8D7BA]/50 overflow-hidden"
-      style={{ fontFamily: "Playful Display" }}
+      style={{ fontFamily: "Playfair Display" }}
       variants={fadeUpVariant}
       initial="hidden"
       whileInView="visible"
@@ -78,7 +78,7 @@ const CardComponent = ({ index, image, title, description, points }: ProgrammePr
   return (
     <motion.div
       className="w-full h-full flex flex-col md:flex-row items-center bg-transparent overflow-hidden"
-      style={{ fontFamily: "Playful Display" }}
+      style={{ fontFamily: "Playfair Display" }}
       variants={fadeUpVariant}
       initial="hidden"
       whileInView="visible"

@@ -96,7 +96,7 @@ const Closing = ({ children }: { children: ReactNode }) => (
 const PrivateClients = () => (
   <div className="min-h-screen w-full flex flex-col text-[#053d57]" style={{ fontFamily: "Josefin Sans" }}>
     <LandingComponent
-      image="https://images.unsplash.com/photo-1724230759479-32b57f30ba86?q=80&w=2070&auto=format&fit=crop"
+      image="https://images.unsplash.com/photo-1724230759479-32b57f30ba86?q=70&w=1600&auto=format&fit=crop"
       title="Private Wellbeing Management for Individuals and Families"
       titleSize="text-3xl md:text-5xl max-w-5xl leading-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.45)]"
       contactbutton={true}

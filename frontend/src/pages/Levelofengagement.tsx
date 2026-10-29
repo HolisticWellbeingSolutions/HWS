@@ -27,7 +27,7 @@ const Levelofengagement: React.FC = () => {
   return (
     <div className="min-h-screen w-full flex flex-col " style={{fontFamily:"Josefin Sans"}}>
       <LandingComponent
-        image="https://images.unsplash.com/photo-1611420890968-c87853bfa973?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image="https://images.unsplash.com/photo-1611420890968-c87853bfa973?q=70&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         title="Levels of Engagement"
         contactbutton={true}
         textcolor="text-[#ebf0f2]"
