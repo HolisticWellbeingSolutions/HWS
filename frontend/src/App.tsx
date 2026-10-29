@@ -7,7 +7,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import type { ReactNode } from "react";
-import { GoogleOAuthProvider } from "@react-oauth/google";
 
 import Layout from "./components/layout/Layout";
 import ScrollToTop from "./components/ScrollToTop";
@@ -73,8 +72,7 @@ export const AppContent = () => {
 
 /** Providers shared by the browser app and the build-time pre-renderer (entry-server.tsx). */
 export const AppProviders = ({ children }: { children: ReactNode }) => (
-  <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
-    <Provider store={store}>
+  <Provider store={store}>
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />
@@ -82,8 +80,7 @@ export const AppProviders = ({ children }: { children: ReactNode }) => (
           {children}
         </TooltipProvider>
       </QueryClientProvider>
-    </Provider>
-  </GoogleOAuthProvider>
+  </Provider>
 );
 
 const App = () => (

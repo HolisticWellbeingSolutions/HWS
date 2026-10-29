@@ -314,6 +314,7 @@ const MentalHealth = () => {
   return (
     <motion.div style={{ fontFamily: "Josefin Sans" }}>
       <LandingComponent
+        title="Mental Health"
         image="https://images.unsplash.com/photo-1653130892581-7c0ae1f4e8e0?q=70&w=1170&auto=format&fit=crop"
         textcolor="text-[]"
       />
