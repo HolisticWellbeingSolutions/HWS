@@ -9,6 +9,8 @@ import { searchItems } from "../../utils/searchData";
 const Header = ({isProgrammesHover,setIsProgrammesHover}) => {
   
   const [isLevelsHover, setIsLevelsHover] = useState(false);
+  const [isServeHover, setIsServeHover] = useState(false);
+  const [isServeMobileOpen, setIsServeMobileOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProgrammesMobileOpen, setIsProgrammesMobileOpen] = useState(false);
   const [isLevelsMobileOpen, setIsLevelsMobileOpen] = useState(false);
@@ -59,11 +61,14 @@ const Header = ({isProgrammesHover,setIsProgrammesHover}) => {
     { name: "Holistic Wellbeing", path: "/programmes/holistic-wellbeing" },
   ];
 
-  const levelsSubmenu = [
-    { name: "Levels of Engagement", path: "/levels-of-engagement" },
+  const serveSubmenu = [
     { name: "Private Clients & Families", path: "/private-clients" },
     { name: "Family Offices", path: "/family-offices" },
     { name: "Executives", path: "/executives" },
+  ];
+
+  const levelsSubmenu = [
+    { name: "Levels of Engagement", path: "/levels-of-engagement" },
     { name: "HWS Retreat", path: "/retreats-restorative" },
   ];
 
@@ -208,12 +213,62 @@ const Header = ({isProgrammesHover,setIsProgrammesHover}) => {
 
         {/* RIGHT NAV (DESKTOP) - Hidden during search */}
         <div className={`hidden md:flex flex-1 items-center justify-center gap-6 lg:gap-8 transition-all duration-300 ${isSearchOpen ? "md:hidden" : ""}`}>
-          <Link
-            to="/faq"
-            className="relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform hover:text-[#ebf0f2]/50"
+          {/* WHAT WE SERVE */}
+          <div
+            onMouseEnter={() => setIsServeHover(true)}
+            onMouseLeave={() => setIsServeHover(false)}
           >
-            FAQ
-          </Link>
+            <button className="flex items-center gap-1 relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform">
+              WHAT WE SERVE
+            </button>
+
+            <AnimatePresence>
+              {isServeHover && (
+                <motion.div
+                  {...slideDown}
+                  className="absolute right-0 top-[100px] mt-3 w-screen bg-white shadow-xl border-t border-[#053d57]"
+                  style={{ fontFamily: "Josefin Sans" }}
+                >
+                  <div className="grid grid-cols-3 gap-12 bg-[#176a79]/10 px-16 py-12">
+                    <div className="col-span-2">
+                      <ul className="space-y-6">
+                        {serveSubmenu.map(item => (
+                          <li key={item.path}>
+                            <Link
+                              to={item.path}
+                              className="text-lg text-[#053d57] hover:text-[#053d57]/70"
+                            >
+                              {item.name.toUpperCase()}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <p className="text-sm uppercase tracking-wide text-[#053d57] mb-6">
+                        May we help?
+                      </p>
+                      <div className="space-y-4">
+                        <Link
+                          to="/contact"
+                          className="block text-center px-4 py-2 bg-[#053d57]/80 text-white"
+                        >
+                          CONTACT
+                        </Link>
+                        <Link
+                          to="/faq"
+                          className="block text-center px-4 py-2 border border-[#053d57]/30 text-[#053d57]"
+                        >
+                          FAQ
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
 
           {/* LEVELS */}
           <div
@@ -348,13 +403,38 @@ const Header = ({isProgrammesHover,setIsProgrammesHover}) => {
                 ABOUT
               </Link>
 
-              <Link
-                to="/faq"
-                className="block py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                FAQ
-              </Link>
+              {/* WHAT WE SERVE */}
+              <div>
+                <button
+                  onClick={() => setIsServeMobileOpen(!isServeMobileOpen)}
+                  className="w-full flex items-center justify-between py-2"
+                >
+                  <span>WHAT WE SERVE</span>
+                  <ChevronDown
+                    size={16}
+                    className={
+                      isServeMobileOpen
+                        ? "rotate-180 transition-transform"
+                        : "transition-transform"
+                    }
+                  />
+                </button>
+
+                {isServeMobileOpen && (
+                  <div className="pl-4 space-y-2 mt-2">
+                    {serveSubmenu.map(item => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        className="block py-2 text-[#ebf0f2]/80 hover:text-[#ebf0f2]"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               {/* LEVELS */}
               <div>
