@@ -56,9 +56,9 @@ const Header = ({isProgrammesHover,setIsProgrammesHover}) => {
   };
 
   const programmesSubmenu = [
-    { name: "Mental Health", path: "/programmes/mental-health" },
-    { name: "Wellness & Longevity", path: "/programmes/wellness-longevity" },
     { name: "Holistic Wellbeing", path: "/programmes/holistic-wellbeing" },
+    { name: "Wellness & Longevity", path: "/programmes/wellness-longevity" },
+    { name: "Mental Health", path: "/programmes/mental-health" },
   ];
 
   const serveSubmenu = [
