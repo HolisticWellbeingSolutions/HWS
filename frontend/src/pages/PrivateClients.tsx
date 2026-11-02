@@ -18,11 +18,11 @@ const PAGE = `${SITE}/private-clients`;
 
 const pillars = [
   {
-    name: "Mental Health & Psychological Care",
-    lead: "Confidential psychological support informed by clinical expertise and a nuanced understanding of individual circumstances.",
-    text: "Our services encompass psychotherapy, psychological assessments, mental health check-ups and specialist support relating to neurodiversity, behavioural concerns and addiction, where appropriate.",
-    cta: "Explore Mental Health",
-    link: "/programmes/mental-health",
+    name: "Holistic Wellbeing",
+    lead: "An integrated approach to cultivating balance, fulfilment and a deeper sense of personal wellbeing.",
+    text: "Through reflective practice, individual goal-setting and carefully curated experiences, we support clients in bringing greater intention and harmony to the different dimensions of their lives.",
+    cta: "Explore Holistic Wellbeing",
+    link: "/programmes/holistic-wellbeing",
   },
   {
     name: "Wellness & Longevity",
@@ -32,11 +32,11 @@ const pillars = [
     link: "/programmes/wellness-longevity",
   },
   {
-    name: "Holistic Wellbeing",
-    lead: "An integrated approach to cultivating balance, fulfilment and a deeper sense of personal wellbeing.",
-    text: "Through reflective practice, individual goal-setting and carefully curated experiences, we support clients in bringing greater intention and harmony to the different dimensions of their lives.",
-    cta: "Explore Holistic Wellbeing",
-    link: "/programmes/holistic-wellbeing",
+    name: "Mental Health & Psychological Care",
+    lead: "Confidential psychological support informed by clinical expertise and a nuanced understanding of individual circumstances.",
+    text: "Our services encompass psychotherapy, psychological assessments, mental health check-ups and specialist support relating to neurodiversity, behavioural concerns and addiction, where appropriate.",
+    cta: "Explore Mental Health",
+    link: "/programmes/mental-health",
   },
 ];
 
