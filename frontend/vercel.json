@@ -42,16 +42,24 @@
       "destination": "/private-clients/index.html"
     },
     {
+      "source": "/central-london",
+      "destination": "/central-london/index.html"
+    },
+    {
+      "source": "/private-wellbeing-management",
+      "destination": "/private-wellbeing-management/index.html"
+    }
+  ],
+  "redirects": [
+    {
       "source": "/family-offices",
-      "destination": "/family-offices/index.html"
+      "destination": "/private-wellbeing-management",
+      "permanent": true
     },
     {
       "source": "/executives",
-      "destination": "/executives/index.html"
-    },
-    {
-      "source": "/central-london",
-      "destination": "/central-london/index.html"
+      "destination": "/private-wellbeing-management",
+      "permanent": true
     }
   ]
 }

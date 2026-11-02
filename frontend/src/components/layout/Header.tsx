@@ -63,8 +63,7 @@ const Header = ({isProgrammesHover,setIsProgrammesHover}) => {
 
   const serveSubmenu = [
     { name: "Private Clients & Families", path: "/private-clients" },
-    { name: "Family Offices", path: "/family-offices" },
-    { name: "Executives", path: "/executives" },
+    { name: "Private Wellbeing Management", path: "/private-wellbeing-management" },
   ];
 
   const levelsSubmenu = [

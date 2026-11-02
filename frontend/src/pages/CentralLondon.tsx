@@ -271,9 +271,10 @@ const CentralLondon = () => (
         </p>
         <p>
           We also offer dedicated support for{" "}
-          <Link to="/private-clients" className="underline underline-offset-4">private clients and families</Link>,{" "}
-          <Link to="/executives" className="underline underline-offset-4">executives</Link> and{" "}
-          <Link to="/family-offices" className="underline underline-offset-4">family offices</Link>.
+          <Link to="/private-clients" className="underline underline-offset-4">private clients and families</Link>, and
+          bespoke{" "}
+          <Link to="/private-wellbeing-management" className="underline underline-offset-4">private wellbeing management</Link>{" "}
+          for executives, founders and high-profile clients.
         </p>
         <Closing>Private wellbeing support, shaped around the realities of your life.</Closing>
       </div>

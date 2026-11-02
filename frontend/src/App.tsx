@@ -29,8 +29,7 @@ import MentalHealth from "./pages/mental_health";
 import WellnessLongevity from "./pages/wellness_longevity";
 import HolisticWellbeing from "./pages/holistic_wellbeing";
 import PrivateClients from "./pages/PrivateClients";
-import FamilyOffices from "./pages/FamilyOffices";
-import Executives from "./pages/Executives";
+import PrivateWellbeingManagement from "./pages/PrivateWellbeingManagement";
 import CentralLondon from "./pages/CentralLondon";
 
 const queryClient = new QueryClient();
@@ -60,8 +59,7 @@ export const AppContent = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/private-clients" element={<PrivateClients />} />
-          <Route path="/family-offices" element={<FamilyOffices />} />
-          <Route path="/executives" element={<Executives />} />
+          <Route path="/private-wellbeing-management" element={<PrivateWellbeingManagement />} />
           <Route path="/central-london" element={<CentralLondon />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
