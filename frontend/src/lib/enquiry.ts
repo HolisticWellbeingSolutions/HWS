@@ -1,7 +1,8 @@
 /**
  * Shared helpers for the two enquiry forms (Contact page and the side "Contact" panel).
  */
-const API = import.meta.env.VITE_API_URL;
+// Enquiries go to the serverless function deployed with the site (frontend/api/contact.ts).
+const ENQUIRY_ENDPOINT = "/api/contact";
 
 export const CONTACT_PHONE = "+44 7770 778104";
 export const CONTACT_EMAIL = "contact@holisticwell-beingsolutions.com";
@@ -24,26 +25,15 @@ export const isValidPhone = (phone: string): boolean => {
   return digits.length >= 7 && digits.length <= 15;
 };
 
-/**
- * The enquiry server sleeps when idle and takes up to ~30 seconds to wake.
- * Calling this when a visitor arrives wakes it in the background, so it is
- * ready by the time they submit the form.
- */
-let warmedUp = false;
-export const warmUpEnquiryServer = (): void => {
-  if (warmedUp || !API || typeof window === "undefined") return;
-  warmedUp = true;
-  fetch(`${API}/health`, { mode: "no-cors", cache: "no-store" }).catch(() => {
-    /* ignore: this is only a wake-up call */
-  });
-};
+/** Kept for existing callers. Enquiries are now served by Vercel, which needs no wake-up. */
+export const warmUpEnquiryServer = (): void => {};
 
 /** Sends the enquiry. Resolves true only when the server confirms it was delivered. */
 export const submitEnquiry = async (payload: EnquiryPayload): Promise<boolean> => {
   const controller = new AbortController();
-  const timeout = window.setTimeout(() => controller.abort(), 60000);
+  const timeout = window.setTimeout(() => controller.abort(), 30000);
   try {
-    const response = await fetch(`${API}/contact`, {
+    const response = await fetch(ENQUIRY_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),

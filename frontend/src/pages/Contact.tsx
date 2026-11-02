@@ -28,7 +28,6 @@ const staggerContainer = {
 };
 
 const Contact = () => {
-  const API = import.meta.env.VITE_API_URL;
   const { toast } = useToast();
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
   const [formData, setFormData] = useState({
