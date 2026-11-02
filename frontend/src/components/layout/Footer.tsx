@@ -44,9 +44,9 @@ const Footer = () => {
           {/* Links */}
           {[
             [
-              { text: "Mental Health", link: "/programmes/mental-health" },
-              { text: "Wellness & Longevity", link: "/programmes/wellness-longevity" },
               { text: "Holistic Wellbeing", link: "/programmes/holistic-wellbeing" },
+              { text: "Wellness & Longevity", link: "/programmes/wellness-longevity" },
+              { text: "Mental Health", link: "/programmes/mental-health" },
             ],
             [
               { text: "Care Pathway", link: "/carepathway" },
