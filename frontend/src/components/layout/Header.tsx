@@ -212,13 +212,13 @@ const Header = ({isProgrammesHover,setIsProgrammesHover}) => {
 
         {/* RIGHT NAV (DESKTOP) - Hidden during search */}
         <div className={`hidden md:flex flex-1 items-center justify-center gap-6 lg:gap-8 transition-all duration-300 ${isSearchOpen ? "md:hidden" : ""}`}>
-          {/* WHAT WE SERVE */}
+          {/* WHO WE SERVE */}
           <div
             onMouseEnter={() => setIsServeHover(true)}
             onMouseLeave={() => setIsServeHover(false)}
           >
             <button className="flex items-center gap-1 relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform">
-              WHAT WE SERVE
+              WHO WE SERVE
             </button>
 
             <AnimatePresence>
@@ -402,13 +402,13 @@ const Header = ({isProgrammesHover,setIsProgrammesHover}) => {
                 ABOUT
               </Link>
 
-              {/* WHAT WE SERVE */}
+              {/* WHO WE SERVE */}
               <div>
                 <button
                   onClick={() => setIsServeMobileOpen(!isServeMobileOpen)}
                   className="w-full flex items-center justify-between py-2"
                 >
-                  <span>WHAT WE SERVE</span>
+                  <span>WHO WE SERVE</span>
                   <ChevronDown
                     size={16}
                     className={
