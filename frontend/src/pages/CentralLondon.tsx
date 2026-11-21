@@ -26,7 +26,7 @@ const glance = [
   ["Nearest stations", "Holborn, Chancery Lane and Russell Square, all within walking distance"],
   ["Clients from", "Holborn, Bloomsbury, the City, Mayfair, Belgravia, Knightsbridge, Chelsea and across London"],
   ["Ways to meet", "In person at our practice, remotely, or through our Concierge Wellbeing Service by arrangement"],
-  ["Services", "Psychotherapy and counselling, wellness and longevity, and holistic wellbeing programmes"],
+  ["Services", "Psychotherapy, CBT, mindfulness and MBCT, counselling, wellness and longevity, and holistic wellbeing programmes"],
 ];
 
 const areas = [
@@ -220,8 +220,11 @@ const CentralLondon = () => (
           suited to you.
         </p>
         <p>
-          Explore our <Link to="/programmes/mental-health" className="underline underline-offset-4">Mental Health</Link>{" "}
-          programme for the full range of therapies and concerns we support.
+          Explore{" "}
+          <Link to="/cbt-therapy-holborn" className="underline underline-offset-4">CBT in Holborn</Link>,{" "}
+          <Link to="/mindfulness-holborn" className="underline underline-offset-4">mindfulness and MBCT in Holborn</Link>{" "}
+          and our <Link to="/programmes/mental-health" className="underline underline-offset-4">psychotherapy in Holborn</Link>{" "}
+          for the full range of therapies and concerns we support.
         </p>
       </div>
     </section>

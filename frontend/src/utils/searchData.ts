@@ -8,6 +8,22 @@ export interface SearchItem {
 }
 
 export const searchData: SearchItem[] = [
+  {
+    id: "cbt-holborn",
+    title: "CBT Therapy in Holborn, London WC1",
+    description: "Private Cognitive Behavioural Therapy at our Holborn practice and online",
+    path: "/cbt-therapy-holborn",
+    category: "Mental Health",
+    keywords: ["cbt", "cognitive behavioural therapy", "cognitive behavioral therapy", "therapist", "holborn", "wc1", "anxiety", "depression", "ocd", "panic", "insomnia"]
+  },
+  {
+    id: "mindfulness-holborn",
+    title: "Mindfulness & MBCT in Holborn, London WC1",
+    description: "Mindfulness courses, guided meditation and MBCT at our Holborn practice and online",
+    path: "/mindfulness-holborn",
+    category: "Wellness & Longevity",
+    keywords: ["mindfulness", "mbct", "mindfulness-based cognitive therapy", "meditation", "course", "breathwork", "holborn", "wc1"]
+  },
   // Home page
   {
     id: "home-hero",

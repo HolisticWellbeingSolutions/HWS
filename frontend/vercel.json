@@ -48,6 +48,14 @@
     {
       "source": "/private-wellbeing-management",
       "destination": "/private-wellbeing-management/index.html"
+    },
+    {
+      "source": "/cbt-therapy-holborn",
+      "destination": "/cbt-therapy-holborn/index.html"
+    },
+    {
+      "source": "/mindfulness-holborn",
+      "destination": "/mindfulness-holborn/index.html"
     }
   ],
   "redirects": [

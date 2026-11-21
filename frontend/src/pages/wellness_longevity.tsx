@@ -38,7 +38,7 @@ const wellness_longevity = () => {
 
       <ContentSection 
         image='https://images.unsplash.com/photo-1526724038726-3007ffb8025f?q=70&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D '
-        title='Mindfulness Courses'
+        title='Mindfulness Courses in Holborn'
         content='Our mindfulness offering strengthens emotional regulation, attentional stability, and presence. These programmes support clients in navigating stress, enhancing clarity, and cultivating grounded awareness. Each course is delivered with structure, allowing skills to build gradually and sustainably.'
         timelineItems={['Mindfulness for Life','Introducing Mindfulness','Finding Peace in a Frantic World','Deeper Mindfulness','Guided meditation',"Breathwork and reflective practices"]}
         button="Begin a Private Conversation"

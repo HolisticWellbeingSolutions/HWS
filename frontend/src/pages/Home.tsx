@@ -292,7 +292,7 @@ const Home = ({isProgrammesHover,setIsProgrammesHover}) => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-[#27b7d1]">
             HOLISTIC WELLBEING SOLUTIONS
             <span className="block mt-2 text-base md:text-lg lg:text-xl font-medium tracking-wide">
-              Therapy, Psychotherapy &amp; Wellbeing in London
+              Therapy, Psychotherapy &amp; Wellbeing in Holborn, London
             </span>
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl italic text-[#27b7d1] mb-6 md:mb-8 max-w-2xl mx-auto">

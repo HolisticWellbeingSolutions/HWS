@@ -1,5 +1,6 @@
 import {motion } from 'framer-motion'
 import LandingComponent from '@/components/landingComponent'
+import { Link } from 'react-router-dom';
 import HoverExpandPanels from '@/components/HoveredPanels';
 
 
@@ -203,7 +204,7 @@ function Assessments({
 const holistic_wellbeing = () => {
   return (
     <motion.div className='bg-[#176a79]/10 md:bg-white' style={{fontFamily:"Josefin Sans"}}>
-        <LandingComponent image="https://images.unsplash.com/photo-1484402628941-0bb40fc029e7?q=70&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" title="Holistic Wellbeing" buttonText='Start your Journey'
+        <LandingComponent image="https://images.unsplash.com/photo-1484402628941-0bb40fc029e7?q=70&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" title="Holistic Wellbeing in Holborn, London" buttonText='Start your Journey'
         link='/levels-of-engagement'
         textcolor='text-[]' />
         <motion.div
@@ -214,6 +215,12 @@ const holistic_wellbeing = () => {
       >
         <p className=" max-w-3xl  text-[#053d57] text-base mb-5 ">
           Holistic wellbeing at HWS is understood as an elevated and integrated model of health. Beyond the absence of illness, it reflects a state of balance and fulfillment shaped by the alignment of physical, mental, emotional, social, spiritual, and financial realms. 
+        </p>
+        <p className=" max-w-3xl  text-[#053d57] text-base mb-5 ">
+          Our holistic wellbeing programmes are delivered at our practice at 12-18 Theobalds Road, Holborn, London WC1X 8SL, and online. They draw on reflective practice, goal-setting,{" "}
+          <Link to="/mindfulness-holborn" className="underline underline-offset-4">mindfulness and MBCT</Link>, sleep and recovery, nutrition and movement, and can be combined with{" "}
+          <Link to="/programmes/mental-health" className="underline underline-offset-4">psychotherapy</Link> or{" "}
+          <Link to="/cbt-therapy-holborn" className="underline underline-offset-4">CBT in Holborn</Link> where that would help.
         </p>
         
       </motion.div>

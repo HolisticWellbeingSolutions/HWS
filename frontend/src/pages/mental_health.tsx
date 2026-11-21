@@ -3,6 +3,50 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import LandingComponent from "@/components/landingComponent";
 import ContentSection from "@/components/ContentsectionWithList";
+import { Link } from "react-router-dom";
+import { ADDRESS, FaqSection, JsonLd, serviceSchema, type Faq } from "@/components/LocalServiceParts";
+import { CONTACT_EMAIL, CONTACT_PHONE } from "@/lib/enquiry";
+
+const therapies = [
+  "Cognitive Behavioural Therapy (CBT)",
+  "Mindfulness-Based Cognitive Therapy (MBCT)",
+  "Dialectical Behaviour Therapy (DBT)",
+  "EMDR",
+  "Acceptance and Commitment Therapy (ACT)",
+  "Compassion Focused Therapy",
+  "Psychodynamic therapy",
+  "Integrative counselling",
+  "Hypnotherapy",
+];
+
+const faqs: Faq[] = [
+  {
+    q: "Where can I have psychotherapy in Holborn?",
+    a: `At our private practice at ${ADDRESS}, in Holborn on the edge of Bloomsbury, a short walk from Holborn, Chancery Lane and Russell Square stations. Sessions are also available online.`,
+  },
+  {
+    q: "Which types of therapy do you offer?",
+    a: "Our evidence-based therapies include CBT, MBCT, DBT, EMDR, Acceptance and Commitment Therapy, Compassion Focused Therapy, psychodynamic therapy, integrative counselling and hypnotherapy. After your initial consultation we recommend the approach best suited to you.",
+  },
+  {
+    q: "Do you offer CBT in Holborn?",
+    a: "Yes. Cognitive Behavioural Therapy is available at our Holborn practice and online, for anxiety, depression, panic, OCD, phobias, stress, burnout and insomnia, among other concerns.",
+  },
+  {
+    q: "How do I book a first appointment?",
+    a: `Call ${CONTACT_PHONE}, email ${CONTACT_EMAIL} or use our enquiry form. We will arrange a confidential initial consultation at our Holborn practice or online.`,
+  },
+];
+
+const schema = serviceSchema({
+  path: "/programmes/mental-health",
+  crumb: "Psychotherapy & Mental Health",
+  name: "Psychotherapy and mental health support in Holborn, London WC1",
+  serviceType: "Psychotherapy",
+  description:
+    "Private psychotherapy, CBT, MBCT, counselling and psychological assessments at our practice in Holborn, London WC1X 8SL, and online.",
+  faqs,
+});
 
 const ImageOverlayCarouse = ({
   images = [],
@@ -313,8 +357,9 @@ const ModifiedContentSection = ({
 const MentalHealth = () => {
   return (
     <motion.div style={{ fontFamily: "Josefin Sans" }}>
+      <JsonLd data={schema} />
       <LandingComponent
-        title="Mental Health"
+        title="Psychotherapy & Mental Health in Holborn"
         image="https://images.unsplash.com/photo-1653130892581-7c0ae1f4e8e0?q=70&w=1170&auto=format&fit=crop"
         textcolor="text-[]"
       />
@@ -331,6 +376,13 @@ const MentalHealth = () => {
           yet flexible pathway that responds to each individual’s needs and
           circumstances.
         </p>
+        <p className=" max-w-3xl text-[#053d57] text-base mb-5 ">
+          We offer private psychotherapy at our practice at {ADDRESS}, in Holborn, Central London, and online. Our
+          evidence-based therapies include{" "}
+          <Link to="/cbt-therapy-holborn" className="underline underline-offset-4">Cognitive Behavioural Therapy (CBT)</Link>,{" "}
+          <Link to="/mindfulness-holborn" className="underline underline-offset-4">Mindfulness-Based Cognitive Therapy (MBCT)</Link>,
+          DBT, EMDR, ACT, Compassion Focused Therapy, psychodynamic therapy, integrative counselling and hypnotherapy.
+        </p>
       </motion.div>
 
       <ImageOverlayCarouse
@@ -345,7 +397,7 @@ const MentalHealth = () => {
           "Bereavement and grief",
           "Low self-esteem",
           "Anxiety",
-          "generalised anxiety",
+          "Generalised anxiety",
           "Social anxiety",
           "Health anxiety",
           "Body dysmorphic disorder",
@@ -353,12 +405,12 @@ const MentalHealth = () => {
           "Disordered eating",
           "Burnout and exhaustion",
           "Menopause",
-          "Decision Making",
-          "Decision burn out",
+          "Decision making",
+          "Decision burnout",
           "Stress management",
-          "Post parted depression",
+          "Postpartum depression",
           "Life transition",
-          "Finance management and worry",
+          "Financial worry",
           "Excessive worry",
           "PTSD",
           "OCD",
@@ -366,11 +418,8 @@ const MentalHealth = () => {
           "Panic",
           "Pain management",
           "Gambling-related concerns",
-          "Pornography Addiction",
-          "Sex Addiction",
-          "Health anxiety",
-          "Emetophobia",
-          "Worry",
+          "Pornography addiction",
+          "Sex addiction",
           "And other related challenges",
         ]}
       />
@@ -430,6 +479,30 @@ const MentalHealth = () => {
         textWidth="40%"
         paddingX="px-20"
       />
+      <section className="py-10 md:py-16 px-5 md:px-12 lg:px-24 flex justify-center bg-[#176a79]/10 text-[#053d57]">
+        <div className="max-w-3xl w-full space-y-4 text-sm md:text-base leading-relaxed">
+          <h2 className="text-2xl md:text-3xl">Psychotherapy in Holborn, WC1</h2>
+          <p className="text-lg md:text-xl text-[#176a79]">Evidence-based therapy at our practice near Bloomsbury</p>
+          <p>
+            Our practice on Theobalds Road sits in the WC1 postcode, between Holborn and Bloomsbury. Every course of
+            therapy begins with a confidential consultation, after which we recommend the approach best suited to you
+            and agree how progress will be reviewed.
+          </p>
+          <ul className="grid gap-2 sm:grid-cols-2">
+            {therapies.map((t) => (
+              <li key={t} className="bg-white px-4 py-3 shadow-sm">{t}</li>
+            ))}
+          </ul>
+          <p>
+            Read more about{" "}
+            <Link to="/cbt-therapy-holborn" className="underline underline-offset-4">CBT in Holborn</Link>,{" "}
+            <Link to="/mindfulness-holborn" className="underline underline-offset-4">mindfulness and MBCT in Holborn</Link>{" "}
+            and how we support clients from across{" "}
+            <Link to="/central-london" className="underline underline-offset-4">Central London</Link>.
+          </p>
+        </div>
+      </section>
+      <FaqSection id="mh-faq" title="Psychotherapy in Holborn: Frequently Asked Questions" faqs={faqs} />
     </motion.div>
   );
 };

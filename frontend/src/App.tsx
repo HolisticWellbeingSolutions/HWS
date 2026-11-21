@@ -31,6 +31,8 @@ import HolisticWellbeing from "./pages/holistic_wellbeing";
 import PrivateClients from "./pages/PrivateClients";
 import PrivateWellbeingManagement from "./pages/PrivateWellbeingManagement";
 import CentralLondon from "./pages/CentralLondon";
+import CbtHolborn from "./pages/CbtHolborn";
+import MindfulnessHolborn from "./pages/MindfulnessHolborn";
 
 const queryClient = new QueryClient();
 
@@ -61,6 +63,8 @@ export const AppContent = () => {
           <Route path="/private-clients" element={<PrivateClients />} />
           <Route path="/private-wellbeing-management" element={<PrivateWellbeingManagement />} />
           <Route path="/central-london" element={<CentralLondon />} />
+          <Route path="/cbt-therapy-holborn" element={<CbtHolborn />} />
+          <Route path="/mindfulness-holborn" element={<MindfulnessHolborn />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

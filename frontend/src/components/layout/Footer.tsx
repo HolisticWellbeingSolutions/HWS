@@ -47,6 +47,8 @@ const Footer = () => {
               { text: "Holistic Wellbeing", link: "/programmes/holistic-wellbeing" },
               { text: "Wellness & Longevity", link: "/programmes/wellness-longevity" },
               { text: "Mental Health", link: "/programmes/mental-health" },
+              { text: "CBT in Holborn", link: "/cbt-therapy-holborn" },
+              { text: "Mindfulness in Holborn", link: "/mindfulness-holborn" },
             ],
             [
               { text: "Care Pathway", link: "/carepathway" },

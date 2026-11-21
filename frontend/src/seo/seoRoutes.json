@@ -5,8 +5,8 @@
   "routes": [
     {
       "path": "/",
-      "title": "Holistic Wellbeing Solutions London | Therapy & Wellbeing",
-      "description": "Personalised mental health, psychotherapy, wellness and longevity programmes in London. Confidential, integrated care for mind, body and soul.",
+      "title": "Holistic Wellbeing Solutions | Therapy in Holborn, London",
+      "description": "Private psychotherapy, CBT, mindfulness, wellness and longevity programmes at our Holborn practice, London WC1, and online. Confidential, integrated care.",
       "priority": "1.0"
     },
     {
@@ -17,8 +17,8 @@
     },
     {
       "path": "/programmes/mental-health",
-      "title": "Mental Health Programmes & Psychotherapy London | HWS",
-      "description": "Evidence-based psychotherapy, psychological profiling, ADHD and autism assessments, and discreet recovery support in London, tailored to each individual.",
+      "title": "Psychotherapy in Holborn, London WC1 | Mental Health | HWS",
+      "description": "Private psychotherapy, CBT, MBCT, EMDR and counselling at our Holborn practice, WC1X 8SL, and online, for anxiety, depression, OCD, trauma and more.",
       "priority": "0.9"
     },
     {
@@ -29,8 +29,8 @@
     },
     {
       "path": "/programmes/holistic-wellbeing",
-      "title": "Bespoke Holistic Wellbeing Programmes London | HWS",
-      "description": "Bespoke holistic wellbeing programmes in London, supporting physical, mental, emotional, social, spiritual and financial balance through personalised guidance.",
+      "title": "Holistic Wellbeing Programmes in Holborn, London | HWS",
+      "description": "Bespoke holistic wellbeing programmes at our Holborn practice, London WC1, and online: mindfulness, reflective practice, sleep, nutrition and movement.",
       "priority": "0.9"
     },
     {
@@ -62,6 +62,18 @@
       "title": "Private Therapist Central London | Holborn WC1 | HWS",
       "description": "Private therapist in Holborn, WC1, near Bloomsbury. Psychotherapy, counselling and wellbeing for clients across Central London, in person or online.",
       "priority": "0.8"
+    },
+    {
+      "path": "/cbt-therapy-holborn",
+      "title": "CBT Therapy in Holborn, London WC1 | Private CBT | HWS",
+      "description": "Private Cognitive Behavioural Therapy (CBT) at our Holborn practice, WC1X 8SL, and online, for anxiety, depression, panic, OCD, phobias, stress and insomnia.",
+      "priority": "0.9"
+    },
+    {
+      "path": "/mindfulness-holborn",
+      "title": "Mindfulness & MBCT in Holborn, London WC1 | HWS",
+      "description": "Mindfulness courses, guided meditation and Mindfulness-Based Cognitive Therapy (MBCT) at our Holborn practice, WC1X 8SL, and online. Beginners welcome.",
+      "priority": "0.9"
     },
     {
       "path": "/retreats-restorative",
